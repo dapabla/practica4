@@ -28,20 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.mStrip = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
+            // 
+            // mStrip
+            // 
+            this.mStrip.Location = new System.Drawing.Point(0, 0);
+            this.mStrip.Name = "mStrip";
+            this.mStrip.Size = new System.Drawing.Size(800, 24);
+            this.mStrip.TabIndex = 0;
+            this.mStrip.Text = "menuStrip1";
             // 
             // fPadre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mStrip);
+            this.MainMenuStrip = this.mStrip;
             this.Name = "fPadre";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip mStrip;
     }
 }
 
