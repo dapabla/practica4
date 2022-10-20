@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace practica4
 {
-    public partial class fPadre : Form
+    public partial class Hijo : Form
     {
-        public fPadre()
+        public Hijo()
         {
             InitializeComponent();
         }

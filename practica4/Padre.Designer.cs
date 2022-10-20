@@ -1,6 +1,6 @@
 ﻿namespace practica4
 {
-    partial class fPadre
+    partial class Padre
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,9 +30,9 @@
         {
             this.mStrip = new System.Windows.Forms.MenuStrip();
             this.apartado1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.apartado2 = new System.Windows.Forms.ToolStripMenuItem();
             this.a1_sub1 = new System.Windows.Forms.ToolStripMenuItem();
             this.a1_sub2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.apartado2 = new System.Windows.Forms.ToolStripMenuItem();
             this.arrangeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,6 +60,19 @@
             this.apartado1.Size = new System.Drawing.Size(60, 20);
             this.apartado1.Text = "Archivo";
             // 
+            // a1_sub1
+            // 
+            this.a1_sub1.Name = "a1_sub1";
+            this.a1_sub1.Size = new System.Drawing.Size(180, 22);
+            this.a1_sub1.Text = "Nuevo";
+            this.a1_sub1.Click += new System.EventHandler(this.a1_sub1_Click);
+            // 
+            // a1_sub2
+            // 
+            this.a1_sub2.Name = "a1_sub2";
+            this.a1_sub2.Size = new System.Drawing.Size(180, 22);
+            this.a1_sub2.Text = "Salir";
+            // 
             // apartado2
             // 
             this.apartado2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -71,43 +84,31 @@
             this.apartado2.Size = new System.Drawing.Size(61, 20);
             this.apartado2.Text = "Ventana";
             // 
-            // a1_sub1
-            // 
-            this.a1_sub1.Name = "a1_sub1";
-            this.a1_sub1.Size = new System.Drawing.Size(180, 22);
-            this.a1_sub1.Text = "Nuevo";
-            // 
-            // a1_sub2
-            // 
-            this.a1_sub2.Name = "a1_sub2";
-            this.a1_sub2.Size = new System.Drawing.Size(180, 22);
-            this.a1_sub2.Text = "Salir";
-            // 
             // arrangeIconsToolStripMenuItem
             // 
             this.arrangeIconsToolStripMenuItem.Name = "arrangeIconsToolStripMenuItem";
-            this.arrangeIconsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arrangeIconsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.arrangeIconsToolStripMenuItem.Text = "Arrange Icons";
             // 
             // cascadaToolStripMenuItem
             // 
             this.cascadaToolStripMenuItem.Name = "cascadaToolStripMenuItem";
-            this.cascadaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cascadaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cascadaToolStripMenuItem.Text = "Cascada";
             // 
             // horizontalToolStripMenuItem
             // 
             this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
-            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.horizontalToolStripMenuItem.Text = "Horizontal";
             // 
             // verticalToolStripMenuItem
             // 
             this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
-            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.verticalToolStripMenuItem.Text = "Vertical";
             // 
-            // fPadre
+            // Padre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,8 +116,8 @@
             this.Controls.Add(this.mStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mStrip;
-            this.Name = "fPadre";
-            this.Text = "Form1";
+            this.Name = "Padre";
+            this.Text = "Editor de textos";
             this.mStrip.ResumeLayout(false);
             this.mStrip.PerformLayout();
             this.ResumeLayout(false);
