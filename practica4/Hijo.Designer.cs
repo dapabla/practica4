@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // fHijo
+            // Hijo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "fHijo";
+            this.Name = "Hijo";
             this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hijo_FormClosing);
             this.ResumeLayout(false);
 
         }

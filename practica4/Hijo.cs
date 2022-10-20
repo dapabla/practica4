@@ -16,5 +16,14 @@ namespace practica4
         {
             InitializeComponent();
         }
+
+        private void Hijo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           
+            if (MessageBox.Show("¿Quiere cerrar xxxxxxx?", "", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
