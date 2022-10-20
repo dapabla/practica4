@@ -47,7 +47,7 @@
             this.apartado2});
             this.mStrip.Location = new System.Drawing.Point(0, 0);
             this.mStrip.Name = "mStrip";
-            this.mStrip.Size = new System.Drawing.Size(800, 24);
+            this.mStrip.Size = new System.Drawing.Size(840, 24);
             this.mStrip.TabIndex = 0;
             this.mStrip.Text = "menuStrip1";
             // 
@@ -72,6 +72,7 @@
             this.a1_sub2.Name = "a1_sub2";
             this.a1_sub2.Size = new System.Drawing.Size(180, 22);
             this.a1_sub2.Text = "Salir";
+            this.a1_sub2.Click += new System.EventHandler(this.a1_sub2_Click);
             // 
             // apartado2
             // 
@@ -112,12 +113,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(840, 450);
             this.Controls.Add(this.mStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mStrip;
             this.Name = "Padre";
             this.Text = "Editor de textos";
+            this.Load += new System.EventHandler(this.Padre_Load);
             this.mStrip.ResumeLayout(false);
             this.mStrip.PerformLayout();
             this.ResumeLayout(false);

@@ -21,6 +21,19 @@ namespace practica4
         {
             Hijo hijo = new Hijo();
             hijo.MdiParent = this;
+            hijo.Text = "";
+            hijo.Show();
+        }
+
+
+        private void a1_sub2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Padre_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }
