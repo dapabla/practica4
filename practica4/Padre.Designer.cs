@@ -33,10 +33,11 @@
             this.a1_sub1 = new System.Windows.Forms.ToolStripMenuItem();
             this.a1_sub2 = new System.Windows.Forms.ToolStripMenuItem();
             this.apartado2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.arrangeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cascadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apartado2_1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.apartado2_2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.apartado2_3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.apartado2_4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.apartado1,
             this.apartado2});
             this.mStrip.Location = new System.Drawing.Point(0, 0);
+            this.mStrip.MdiWindowListItem = this.apartado2;
             this.mStrip.Name = "mStrip";
             this.mStrip.Size = new System.Drawing.Size(840, 24);
             this.mStrip.TabIndex = 0;
@@ -63,51 +65,61 @@
             // a1_sub1
             // 
             this.a1_sub1.Name = "a1_sub1";
-            this.a1_sub1.Size = new System.Drawing.Size(180, 22);
+            this.a1_sub1.Size = new System.Drawing.Size(109, 22);
             this.a1_sub1.Text = "Nuevo";
             this.a1_sub1.Click += new System.EventHandler(this.a1_sub1_Click);
             // 
             // a1_sub2
             // 
             this.a1_sub2.Name = "a1_sub2";
-            this.a1_sub2.Size = new System.Drawing.Size(180, 22);
+            this.a1_sub2.Size = new System.Drawing.Size(109, 22);
             this.a1_sub2.Text = "Salir";
             this.a1_sub2.Click += new System.EventHandler(this.a1_sub2_Click);
             // 
             // apartado2
             // 
             this.apartado2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.arrangeIconsToolStripMenuItem,
-            this.cascadaToolStripMenuItem,
-            this.horizontalToolStripMenuItem,
-            this.verticalToolStripMenuItem});
+            this.apartado2_1,
+            this.apartado2_2,
+            this.apartado2_3,
+            this.apartado2_4,
+            this.toolStripSeparator1});
             this.apartado2.Name = "apartado2";
             this.apartado2.Size = new System.Drawing.Size(61, 20);
             this.apartado2.Text = "Ventana";
             // 
-            // arrangeIconsToolStripMenuItem
+            // apartado2_1
             // 
-            this.arrangeIconsToolStripMenuItem.Name = "arrangeIconsToolStripMenuItem";
-            this.arrangeIconsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.arrangeIconsToolStripMenuItem.Text = "Arrange Icons";
+            this.apartado2_1.Name = "apartado2_1";
+            this.apartado2_1.Size = new System.Drawing.Size(147, 22);
+            this.apartado2_1.Text = "Arrange Icons";
+            this.apartado2_1.Click += new System.EventHandler(this.apartado2_1_Click);
             // 
-            // cascadaToolStripMenuItem
+            // apartado2_2
             // 
-            this.cascadaToolStripMenuItem.Name = "cascadaToolStripMenuItem";
-            this.cascadaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.cascadaToolStripMenuItem.Text = "Cascada";
+            this.apartado2_2.Name = "apartado2_2";
+            this.apartado2_2.Size = new System.Drawing.Size(147, 22);
+            this.apartado2_2.Text = "Cascada";
+            this.apartado2_2.Click += new System.EventHandler(this.apartado2_2_Click);
             // 
-            // horizontalToolStripMenuItem
+            // apartado2_3
             // 
-            this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
-            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.horizontalToolStripMenuItem.Text = "Horizontal";
+            this.apartado2_3.Name = "apartado2_3";
+            this.apartado2_3.Size = new System.Drawing.Size(147, 22);
+            this.apartado2_3.Text = "Horizontal";
+            this.apartado2_3.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
             // 
-            // verticalToolStripMenuItem
+            // apartado2_4
             // 
-            this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
-            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.verticalToolStripMenuItem.Text = "Vertical";
+            this.apartado2_4.Name = "apartado2_4";
+            this.apartado2_4.Size = new System.Drawing.Size(147, 22);
+            this.apartado2_4.Text = "Vertical";
+            this.apartado2_4.Click += new System.EventHandler(this.apartado2_4_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
             // 
             // Padre
             // 
@@ -120,6 +132,7 @@
             this.Name = "Padre";
             this.Text = "Editor de textos";
             this.Load += new System.EventHandler(this.Padre_Load);
+            this.MdiChildActivate += new System.EventHandler(this.Padre_MdiChildActivate);
             this.mStrip.ResumeLayout(false);
             this.mStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -134,10 +147,11 @@
         private System.Windows.Forms.ToolStripMenuItem a1_sub1;
         private System.Windows.Forms.ToolStripMenuItem a1_sub2;
         private System.Windows.Forms.ToolStripMenuItem apartado2;
-        private System.Windows.Forms.ToolStripMenuItem arrangeIconsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cascadaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem apartado2_1;
+        private System.Windows.Forms.ToolStripMenuItem apartado2_2;
+        private System.Windows.Forms.ToolStripMenuItem apartado2_3;
+        private System.Windows.Forms.ToolStripMenuItem apartado2_4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 

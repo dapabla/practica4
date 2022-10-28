@@ -16,6 +16,7 @@ namespace practica4
         public Padre()
         {
             InitializeComponent();
+            this.apartado2.Visible = false;
             
         }
 
@@ -25,7 +26,7 @@ namespace practica4
             Hijo hijo = new Hijo();
             hijo.Text = "Documento " + i;
             hijo.MdiParent = this;
-      
+
             hijo.Show();
         }
 
@@ -38,6 +39,38 @@ namespace practica4
         private void Padre_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void apartado2_1_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.ArrangeIcons);
+        }
+
+        private void apartado2_2_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void apartado2_4_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void Padre_MdiChildActivate(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild == null)
+            {
+                this.apartado2.Visible = false;
+            }
+            else
+            {
+                this.apartado2.Visible = true;
+            }
         }
     }
 }
