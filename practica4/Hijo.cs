@@ -26,9 +26,9 @@ namespace practica4
             }
         }
 
-       /* private void pegarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pegarToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-        }*/
+        }
     }
 }
