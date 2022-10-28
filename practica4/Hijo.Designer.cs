@@ -39,16 +39,17 @@
             this.cortar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.copiar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.pegar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
+            this.separadorEdicion_Hijo = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 24);
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(800, 426);
+            this.richTextBox1.Size = new System.Drawing.Size(800, 450);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -80,7 +81,7 @@
             this.guardar_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.guardar_Hijo.MergeIndex = 2;
             this.guardar_Hijo.Name = "guardar_Hijo";
-            this.guardar_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.guardar_Hijo.Size = new System.Drawing.Size(150, 22);
             this.guardar_Hijo.Text = "Guardar";
             // 
             // guardarComo_Hijo
@@ -88,7 +89,7 @@
             this.guardarComo_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.guardarComo_Hijo.MergeIndex = 3;
             this.guardarComo_Hijo.Name = "guardarComo_Hijo";
-            this.guardarComo_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.guardarComo_Hijo.Size = new System.Drawing.Size(150, 22);
             this.guardarComo_Hijo.Text = "Guardar como";
             // 
             // cerrar_Hijo
@@ -96,13 +97,14 @@
             this.cerrar_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.cerrar_Hijo.MergeIndex = 5;
             this.cerrar_Hijo.Name = "cerrar_Hijo";
-            this.cerrar_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.cerrar_Hijo.Size = new System.Drawing.Size(150, 22);
             this.cerrar_Hijo.Text = "Cerrar";
             // 
             // edicion_Hijo
             // 
             this.edicion_Hijo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deshacer_Hijo,
+            this.separadorEdicion_Hijo,
             this.cortar_Hijo,
             this.copiar_Hijo,
             this.pegar_Hijo});
@@ -115,27 +117,32 @@
             // deshacer_Hijo
             // 
             this.deshacer_Hijo.Name = "deshacer_Hijo";
-            this.deshacer_Hijo.Size = new System.Drawing.Size(122, 22);
+            this.deshacer_Hijo.Size = new System.Drawing.Size(180, 22);
             this.deshacer_Hijo.Text = "Deshacer";
             // 
             // cortar_Hijo
             // 
             this.cortar_Hijo.Name = "cortar_Hijo";
-            this.cortar_Hijo.Size = new System.Drawing.Size(122, 22);
+            this.cortar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.cortar_Hijo.Text = "Cortar";
             // 
             // copiar_Hijo
             // 
             this.copiar_Hijo.Name = "copiar_Hijo";
-            this.copiar_Hijo.Size = new System.Drawing.Size(122, 22);
+            this.copiar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.copiar_Hijo.Text = "Copiar";
             // 
             // pegar_Hijo
             // 
             this.pegar_Hijo.Name = "pegar_Hijo";
-            this.pegar_Hijo.Size = new System.Drawing.Size(122, 22);
+            this.pegar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.pegar_Hijo.Text = "Pegar";
             this.pegar_Hijo.Click += new System.EventHandler(this.pegarToolStripMenuItem_Click);
+            // 
+            // separadorEdicion_Hijo
+            // 
+            this.separadorEdicion_Hijo.Name = "separadorEdicion_Hijo";
+            this.separadorEdicion_Hijo.Size = new System.Drawing.Size(177, 6);
             // 
             // Hijo
             // 
@@ -168,5 +175,6 @@
         private System.Windows.Forms.ToolStripMenuItem cortar_Hijo;
         private System.Windows.Forms.ToolStripMenuItem copiar_Hijo;
         private System.Windows.Forms.ToolStripMenuItem pegar_Hijo;
+        private System.Windows.Forms.ToolStripSeparator separadorEdicion_Hijo;
     }
 }

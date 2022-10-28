@@ -75,5 +75,17 @@ namespace practica4
                 this.titulo_S.Text = this.ActiveMdiChild.Text;
             }
         }
+
+        private void barraDeEstadoVer_Padre_Click(object sender, EventArgs e)
+        {
+            if (this.barraDeEstadoVer_Padre.CheckState==CheckState.Checked)
+            {
+                barraEstado_Padre.Visible = true;
+            }
+            else
+            {
+                barraEstado_Padre.Visible = false;
+            }
+        }
     }
 }
