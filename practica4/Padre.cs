@@ -17,7 +17,8 @@ namespace practica4
         {
             InitializeComponent();
             this.apartado2.Visible = false;
-            
+            this.titulo_S.Text = "";
+
         }
 
         private void a1_sub1_Click(object sender, EventArgs e)
@@ -66,10 +67,12 @@ namespace practica4
             if (this.ActiveMdiChild == null)
             {
                 this.apartado2.Visible = false;
+                this.titulo_S.Text = "";
             }
             else
             {
                 this.apartado2.Visible = true;
+                this.titulo_S.Text = this.ActiveMdiChild.Text;
             }
         }
     }

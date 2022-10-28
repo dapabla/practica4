@@ -25,5 +25,10 @@ namespace practica4
                 e.Cancel = true;
             }
         }
+
+        private void pegarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
