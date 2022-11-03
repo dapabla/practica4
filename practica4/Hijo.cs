@@ -12,9 +12,17 @@ namespace practica4
 {
     public partial class Hijo : Form
     {
+        private String nombre;
         public Hijo()
         {
             InitializeComponent();
+            this.nombre = "";
+        }
+
+        public Hijo(String nombre)
+        {
+            InitializeComponent();
+            this.nombre = nombre;
         }
 
         private void Hijo_FormClosing(object sender, FormClosingEventArgs e)
@@ -39,6 +47,30 @@ namespace practica4
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "Seleccione el archivo a guardar";
+            saveFileDialog.Filter = "Archivos de texto|*.txt|Todos los archivos|*.*";
+            DialogResult decision = saveFileDialog.ShowDialog();
+
+            if (decision == DialogResult.OK)
+            {
+                this.textoHijo.SaveFile(saveFileDialog.FileName,RichTextBoxStreamType.PlainText);
+                this.nombre = saveFileDialog.FileName;
+            }
+            else if (decision == DialogResult.Cancel)
+            {
+                saveFileDialog.Dispose();
+            }
+        }
+
+        private void guardar_Hijo_Click(object sender, EventArgs e)
+        {
+            if (this.nombre == "")
+            {
+                guardarComo_Hijo.PerformClick();
+            }else
+            {
+                this.textoHijo.SaveFile(this.nombre, RichTextBoxStreamType.PlainText);
+            }
+            
         }
     }
 }

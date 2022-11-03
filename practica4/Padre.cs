@@ -108,7 +108,7 @@ namespace practica4
                 hijo.Show();
             }
             else if(decision == DialogResult.Cancel){
-                hijo.Close();
+                ventana.Dispose();
             }
         }
     }

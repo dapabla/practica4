@@ -81,8 +81,9 @@
             this.guardar_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.guardar_Hijo.MergeIndex = 2;
             this.guardar_Hijo.Name = "guardar_Hijo";
-            this.guardar_Hijo.Size = new System.Drawing.Size(150, 22);
+            this.guardar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.guardar_Hijo.Text = "Guardar";
+            this.guardar_Hijo.Click += new System.EventHandler(this.guardar_Hijo_Click);
             // 
             // guardarComo_Hijo
             // 
@@ -98,7 +99,7 @@
             this.cerrar_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.cerrar_Hijo.MergeIndex = 5;
             this.cerrar_Hijo.Name = "cerrar_Hijo";
-            this.cerrar_Hijo.Size = new System.Drawing.Size(150, 22);
+            this.cerrar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.cerrar_Hijo.Text = "Cerrar";
             // 
             // edicion_Hijo
