@@ -54,6 +54,8 @@ namespace practica4
             {
                 this.textoHijo.SaveFile(saveFileDialog.FileName,RichTextBoxStreamType.PlainText);
                 this.nombre = saveFileDialog.FileName;
+                String[] partes = saveFileDialog.FileName.Split('\\');
+                this.Text = partes[partes.Length-1];
             }
             else if (decision == DialogResult.Cancel)
             {

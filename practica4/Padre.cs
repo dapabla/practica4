@@ -94,7 +94,8 @@ namespace practica4
             ventana.Title = "Seleccione el archivo a abrir";
             ventana.Filter = "Archivos de texto|*.txt|Todos los archivos|*.*";
             DialogResult decision = ventana.ShowDialog();
-            Hijo hijo = new Hijo();
+            String ruta = ventana.FileName;
+            Hijo hijo = new Hijo(ruta);
 
             if (decision==DialogResult.OK)
             {
