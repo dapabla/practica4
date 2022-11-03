@@ -65,7 +65,7 @@ namespace practica4
 
         private void guardar_Hijo_Click(object sender, EventArgs e)
         {
-            if (this.nombre == "")
+            if (this.nombre =="")
             {
                 guardarComo_Hijo.PerformClick();
             }else
