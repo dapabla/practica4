@@ -92,6 +92,24 @@ namespace practica4
         {
             OpenFileDialog ventana = new OpenFileDialog();
             ventana.Title = "Seleccione el archivo a abrir";
+            ventana.Filter = "Archivos de texto|*.txt|Todos los archivos|*.*";
+            DialogResult decision = ventana.ShowDialog();
+            Hijo hijo = new Hijo();
+
+            if (decision==DialogResult.OK)
+            {
+                
+                hijo.MdiParent = this;
+                hijo.GetRichTextBox().LoadFile(ventana.FileName, RichTextBoxStreamType.PlainText);
+                String[] partes = ventana.FileName.Split('\\');
+                hijo.Text = partes[partes.Length-1];
+
+
+                hijo.Show();
+            }
+            else if(decision == DialogResult.Cancel){
+                hijo.Close();
+            }
         }
     }
 }

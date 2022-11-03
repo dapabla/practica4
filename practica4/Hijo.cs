@@ -30,5 +30,15 @@ namespace practica4
         {
 
         }
+        public RichTextBox GetRichTextBox()
+        {
+            return textoHijo;
+        }
+
+        private void guardarComo_Hijo_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Seleccione el archivo a guardar";
+        }
     }
 }
