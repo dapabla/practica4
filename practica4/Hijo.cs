@@ -77,5 +77,10 @@ namespace practica4
             }
             
         }
+
+        private void deshacer_Hijo_Click(object sender, EventArgs e)
+        {
+            this.GetRichTextBox().de
+        }
     }
 }
