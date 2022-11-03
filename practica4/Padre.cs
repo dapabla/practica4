@@ -87,5 +87,11 @@ namespace practica4
                 barraEstado_Padre.Visible = false;
             }
         }
+
+        private void abrir_Padre_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ventana = new OpenFileDialog();
+            ventana.Title = "Seleccione el archivo a abrir";
+        }
     }
 }
