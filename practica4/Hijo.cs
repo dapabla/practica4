@@ -98,5 +98,22 @@ namespace practica4
             this.GetRichTextBox().Paste();
         }
 
+        private void fuente_Hijo_Click(object sender, EventArgs e)
+        {
+            FontDialog fuente = new FontDialog();
+            fuente.ShowColor = true;
+            fuente.Font = this.GetRichTextBox().Font;
+
+            if (fuente.ShowDialog() != DialogResult.Cancel)
+            {
+                this.GetRichTextBox().Font = fuente.Font;
+                this.GetRichTextBox().ForeColor = fuente.Color;
+            }
+            else
+            {
+                fuente.Dispose();
+            }
+
+        }
     }
 }

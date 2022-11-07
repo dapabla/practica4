@@ -40,13 +40,14 @@
             this.cortar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.copiar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.pegar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
+            this.fuente_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textoHijo
             // 
             this.textoHijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textoHijo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoHijo.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textoHijo.Location = new System.Drawing.Point(0, 0);
             this.textoHijo.Name = "textoHijo";
             this.textoHijo.Size = new System.Drawing.Size(800, 450);
@@ -57,7 +58,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivo_Hijo,
-            this.edicion_Hijo});
+            this.edicion_Hijo,
+            this.fuente_Hijo});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -149,6 +151,13 @@
             this.pegar_Hijo.Text = "Pegar";
             this.pegar_Hijo.Click += new System.EventHandler(this.pegar_Hijo_Click);
             // 
+            // fuente_Hijo
+            // 
+            this.fuente_Hijo.Name = "fuente_Hijo";
+            this.fuente_Hijo.Size = new System.Drawing.Size(55, 20);
+            this.fuente_Hijo.Text = "Fuente";
+            this.fuente_Hijo.Click += new System.EventHandler(this.fuente_Hijo_Click);
+            // 
             // Hijo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,5 +190,6 @@
         private System.Windows.Forms.ToolStripMenuItem copiar_Hijo;
         private System.Windows.Forms.ToolStripMenuItem pegar_Hijo;
         private System.Windows.Forms.ToolStripSeparator separadorEdicion_Hijo;
+        private System.Windows.Forms.ToolStripMenuItem fuente_Hijo;
     }
 }
