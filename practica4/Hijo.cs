@@ -13,10 +13,12 @@ namespace practica4
     public partial class Hijo : Form
     {
         private String nombre;
+        private String originalText;
         public Hijo()
         {
             InitializeComponent();
             this.nombre = "";
+            this.originalText = this.GetRichTextBox().Text;
         }
 
         public Hijo(String nombre)
@@ -28,7 +30,7 @@ namespace practica4
         private void Hijo_FormClosing(object sender, FormClosingEventArgs e)
         {
            
-            if (this.GetRichTextBox().Modified==false)
+            if (this.GetRichTextBox().Modified==true)
             {
                 if(MessageBox.Show("¿Quieres cerrar sin guardar?", "Aviso", MessageBoxButtons.YesNo) == DialogResult.No)
                 {
@@ -47,6 +49,7 @@ namespace practica4
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "Seleccione el archivo a guardar";
             saveFileDialog.Filter = "Archivos de texto|*.txt|Todos los archivos|*.*";
+            saveFileDialog.InitialDirectory = "c:\\";
             DialogResult decision = saveFileDialog.ShowDialog();
 
             if (decision == DialogResult.OK)
@@ -54,6 +57,7 @@ namespace practica4
                 String[] partes = saveFileDialog.FileName.Split('\\');
                 this.Text = partes[partes.Length - 1];
                 this.textoHijo.SaveFile(saveFileDialog.FileName,RichTextBoxStreamType.PlainText);
+                this.originalText = this.GetRichTextBox().Text;
                 this.nombre = saveFileDialog.FileName;
             }
             else if (decision == DialogResult.Cancel)
@@ -70,6 +74,7 @@ namespace practica4
             }else
             {
                 this.textoHijo.SaveFile(this.nombre, RichTextBoxStreamType.PlainText);
+                this.originalText = this.GetRichTextBox().Text;
             }
             
         }
@@ -93,6 +98,18 @@ namespace practica4
         private void pegar_Hijo_Click(object sender, EventArgs e)
         {
             this.GetRichTextBox().Paste();
+        }
+
+        private void textoHijo_TextChanged(object sender, EventArgs e)
+        {
+            if (originalText!=this.GetRichTextBox().Text)
+            {
+                this.GetRichTextBox().Modified = true;
+            }
+            else
+            {
+                this.GetRichTextBox().Modified = false;
+            }
         }
     }
 }

@@ -119,6 +119,7 @@ namespace practica4
             OpenFileDialog ventana = new OpenFileDialog();
             ventana.Title = "Seleccione el archivo a abrir";
             ventana.Filter = "Archivos de texto|*.txt|Todos los archivos|*.*";
+            ventana.InitialDirectory = "c:\\";
             DialogResult decision = ventana.ShowDialog();
             String ruta = ventana.FileName;
             Hijo hijo = new Hijo(ruta);

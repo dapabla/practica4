@@ -52,6 +52,7 @@
             this.textoHijo.Size = new System.Drawing.Size(800, 450);
             this.textoHijo.TabIndex = 0;
             this.textoHijo.Text = "";
+            this.textoHijo.TextChanged += new System.EventHandler(this.textoHijo_TextChanged);
             // 
             // menuStrip1
             // 
@@ -119,33 +120,33 @@
             // deshacer_Hijo
             // 
             this.deshacer_Hijo.Name = "deshacer_Hijo";
-            this.deshacer_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.deshacer_Hijo.Size = new System.Drawing.Size(122, 22);
             this.deshacer_Hijo.Text = "Deshacer";
             this.deshacer_Hijo.Click += new System.EventHandler(this.deshacer_Hijo_Click);
             // 
             // separadorEdicion_Hijo
             // 
             this.separadorEdicion_Hijo.Name = "separadorEdicion_Hijo";
-            this.separadorEdicion_Hijo.Size = new System.Drawing.Size(177, 6);
+            this.separadorEdicion_Hijo.Size = new System.Drawing.Size(119, 6);
             // 
             // cortar_Hijo
             // 
             this.cortar_Hijo.Name = "cortar_Hijo";
-            this.cortar_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.cortar_Hijo.Size = new System.Drawing.Size(122, 22);
             this.cortar_Hijo.Text = "Cortar";
             this.cortar_Hijo.Click += new System.EventHandler(this.cortar_Hijo_Click);
             // 
             // copiar_Hijo
             // 
             this.copiar_Hijo.Name = "copiar_Hijo";
-            this.copiar_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.copiar_Hijo.Size = new System.Drawing.Size(122, 22);
             this.copiar_Hijo.Text = "Copiar";
             this.copiar_Hijo.Click += new System.EventHandler(this.copiar_Hijo_Click);
             // 
             // pegar_Hijo
             // 
             this.pegar_Hijo.Name = "pegar_Hijo";
-            this.pegar_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.pegar_Hijo.Size = new System.Drawing.Size(122, 22);
             this.pegar_Hijo.Text = "Pegar";
             this.pegar_Hijo.Click += new System.EventHandler(this.pegar_Hijo_Click);
             // 
