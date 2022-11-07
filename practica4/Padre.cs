@@ -19,6 +19,19 @@ namespace practica4
             this.apartado2.Visible = false;
             this.titulo_S.Text = "";
 
+            foreach (ToolStripMenuItem x in this.mStrip.Items)
+            {
+                x.MouseHover += new EventHandler(menuHover);
+                x.MouseHover += new EventHandler(menuLeave);
+
+
+                foreach (ToolStripItem y in x.DropDownItems)
+                {
+                    y.MouseHover += new EventHandler(menuHover);
+                    y.MouseHover += new EventHandler(menuLeave);
+                }
+            }
+
         }
 
         private void a1_sub1_Click(object sender, EventArgs e)
@@ -27,8 +40,21 @@ namespace practica4
             Hijo hijo = new Hijo();
             hijo.Text = "Documento " + i;
             hijo.MdiParent = this;
-
             hijo.Show();
+
+
+            foreach (ToolStripMenuItem x in this.mStrip.Items)
+            {
+                x.MouseHover += new EventHandler(menuHover);
+                x.MouseHover += new EventHandler(menuLeave);
+
+
+                foreach (ToolStripItem y in x.DropDownItems)
+                {
+                    y.MouseHover += new EventHandler(menuHover);
+                    y.MouseHover += new EventHandler(menuLeave);
+                }
+            }
         }
 
 
@@ -111,6 +137,15 @@ namespace practica4
             else if(decision == DialogResult.Cancel){
                 ventana.Dispose();
             }
+        }
+
+        public void menuHover(object sender, EventArgs e)
+        {
+            this.constante_S.Text = sender.ToString();
+        }
+        public void menuLeave(object sender, EventArgs e)
+        {
+            this.constante_S.Text = "";
         }
     }
 }
