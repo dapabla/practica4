@@ -78,32 +78,32 @@
             // a1_sub1
             // 
             this.a1_sub1.Name = "a1_sub1";
-            this.a1_sub1.Size = new System.Drawing.Size(180, 22);
+            this.a1_sub1.Size = new System.Drawing.Size(134, 22);
             this.a1_sub1.Text = "Nuevo";
             this.a1_sub1.Click += new System.EventHandler(this.a1_sub1_Click);
             // 
             // abrir_Padre
             // 
             this.abrir_Padre.Name = "abrir_Padre";
-            this.abrir_Padre.Size = new System.Drawing.Size(180, 22);
+            this.abrir_Padre.Size = new System.Drawing.Size(134, 22);
             this.abrir_Padre.Text = "Abrir";
             this.abrir_Padre.Click += new System.EventHandler(this.abrir_Padre_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(131, 6);
             // 
             // cerrarTodo_Padre
             // 
             this.cerrarTodo_Padre.Name = "cerrarTodo_Padre";
-            this.cerrarTodo_Padre.Size = new System.Drawing.Size(180, 22);
+            this.cerrarTodo_Padre.Size = new System.Drawing.Size(134, 22);
             this.cerrarTodo_Padre.Text = "Cerrar todo";
             // 
             // a1_sub2
             // 
             this.a1_sub2.Name = "a1_sub2";
-            this.a1_sub2.Size = new System.Drawing.Size(180, 22);
+            this.a1_sub2.Size = new System.Drawing.Size(134, 22);
             this.a1_sub2.Text = "Salir";
             this.a1_sub2.Click += new System.EventHandler(this.a1_sub2_Click);
             // 
@@ -184,13 +184,12 @@
             // constante_S
             // 
             this.constante_S.Name = "constante_S";
-            this.constante_S.Size = new System.Drawing.Size(50, 17);
-            this.constante_S.Text = "Ejemplo";
+            this.constante_S.Size = new System.Drawing.Size(0, 17);
             // 
             // titulo_S
             // 
             this.titulo_S.Name = "titulo_S";
-            this.titulo_S.Size = new System.Drawing.Size(775, 17);
+            this.titulo_S.Size = new System.Drawing.Size(744, 17);
             this.titulo_S.Spring = true;
             this.titulo_S.Text = "toolStripStatusLabel2";
             // 

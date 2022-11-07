@@ -22,13 +22,13 @@ namespace practica4
             foreach (ToolStripMenuItem x in this.mStrip.Items)
             {
                 x.MouseHover += new EventHandler(menuHover);
-                x.MouseHover += new EventHandler(menuLeave);
+                x.MouseLeave += new EventHandler(menuLeave);
 
 
                 foreach (ToolStripItem y in x.DropDownItems)
                 {
                     y.MouseHover += new EventHandler(menuHover);
-                    y.MouseHover += new EventHandler(menuLeave);
+                    y.MouseLeave += new EventHandler(menuLeave);
                 }
             }
 
@@ -46,13 +46,13 @@ namespace practica4
             foreach (ToolStripMenuItem x in this.mStrip.Items)
             {
                 x.MouseHover += new EventHandler(menuHover);
-                x.MouseHover += new EventHandler(menuLeave);
+                x.MouseLeave += new EventHandler(menuLeave);
 
 
                 foreach (ToolStripItem y in x.DropDownItems)
                 {
                     y.MouseHover += new EventHandler(menuHover);
-                    y.MouseHover += new EventHandler(menuLeave);
+                    y.MouseLeave += new EventHandler(menuLeave);
                 }
             }
         }
@@ -141,11 +141,21 @@ namespace practica4
 
         public void menuHover(object sender, EventArgs e)
         {
-            this.constante_S.Text = sender.ToString();
+            if (sender is ToolStripSeparator)
+            {
+                this.constante_S.Text = "";
+            }
+            else
+            {
+                this.constante_S.Text = sender.ToString();
+            }
+            
         }
         public void menuLeave(object sender, EventArgs e)
         {
             this.constante_S.Text = "";
         }
+
+
     }
 }
