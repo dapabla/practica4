@@ -133,19 +133,21 @@
             this.cortar_Hijo.Name = "cortar_Hijo";
             this.cortar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.cortar_Hijo.Text = "Cortar";
+            this.cortar_Hijo.Click += new System.EventHandler(this.cortar_Hijo_Click);
             // 
             // copiar_Hijo
             // 
             this.copiar_Hijo.Name = "copiar_Hijo";
             this.copiar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.copiar_Hijo.Text = "Copiar";
+            this.copiar_Hijo.Click += new System.EventHandler(this.copiar_Hijo_Click);
             // 
             // pegar_Hijo
             // 
             this.pegar_Hijo.Name = "pegar_Hijo";
             this.pegar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.pegar_Hijo.Text = "Pegar";
-            this.pegar_Hijo.Click += new System.EventHandler(this.pegarToolStripMenuItem_Click);
+            this.pegar_Hijo.Click += new System.EventHandler(this.pegar_Hijo_Click);
             // 
             // Hijo
             // 

@@ -28,19 +28,15 @@ namespace practica4
         private void Hijo_FormClosing(object sender, FormClosingEventArgs e)
         {
            
-            if (this.GetRichTextBox().Modified==true)
+            if (this.GetRichTextBox().Modified==false)
             {
-                if(MessageBox.Show("¿Quiere cerrar sin guardar ?", "Aviso", MessageBoxButtons.YesNo) == DialogResult.No)
+                if(MessageBox.Show("¿Quieres cerrar sin guardar?", "Aviso", MessageBoxButtons.YesNo) == DialogResult.No)
                 {
                     e.Cancel = true;
                 }
             }
         }
 
-        private void pegarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
         public RichTextBox GetRichTextBox()
         {
             return textoHijo;
@@ -55,10 +51,10 @@ namespace practica4
 
             if (decision == DialogResult.OK)
             {
+                String[] partes = saveFileDialog.FileName.Split('\\');
+                this.Text = partes[partes.Length - 1];
                 this.textoHijo.SaveFile(saveFileDialog.FileName,RichTextBoxStreamType.PlainText);
                 this.nombre = saveFileDialog.FileName;
-                String[] partes = saveFileDialog.FileName.Split('\\');
-                this.Text = partes[partes.Length-1];
             }
             else if (decision == DialogResult.Cancel)
             {
@@ -80,7 +76,23 @@ namespace practica4
 
         private void deshacer_Hijo_Click(object sender, EventArgs e)
         {
-           
+
+                this.GetRichTextBox().Undo();
+        }
+
+        private void cortar_Hijo_Click(object sender, EventArgs e)
+        {
+            this.GetRichTextBox().Cut();
+        }
+
+        private void copiar_Hijo_Click(object sender, EventArgs e)
+        {
+            this.GetRichTextBox().Copy();
+        }
+
+        private void pegar_Hijo_Click(object sender, EventArgs e)
+        {
+            this.GetRichTextBox().Paste();
         }
     }
 }
