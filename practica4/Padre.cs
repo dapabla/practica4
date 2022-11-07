@@ -129,9 +129,9 @@ namespace practica4
                 
                 hijo.MdiParent = this;
                 hijo.GetRichTextBox().LoadFile(ventana.FileName, RichTextBoxStreamType.PlainText);
+                hijo.GetRichTextBox().Modified = false;
                 String[] partes = ventana.FileName.Split('\\');
                 hijo.Text = partes[partes.Length-1];
-
 
                 hijo.Show();
             }

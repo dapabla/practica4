@@ -13,12 +13,10 @@ namespace practica4
     public partial class Hijo : Form
     {
         private String nombre;
-        private String originalText;
         public Hijo()
         {
             InitializeComponent();
             this.nombre = "";
-            this.originalText = this.GetRichTextBox().Text;
         }
 
         public Hijo(String nombre)
@@ -57,7 +55,7 @@ namespace practica4
                 String[] partes = saveFileDialog.FileName.Split('\\');
                 this.Text = partes[partes.Length - 1];
                 this.textoHijo.SaveFile(saveFileDialog.FileName,RichTextBoxStreamType.PlainText);
-                this.originalText = this.GetRichTextBox().Text;
+                this.GetRichTextBox().Modified = false;
                 this.nombre = saveFileDialog.FileName;
             }
             else if (decision == DialogResult.Cancel)
@@ -74,7 +72,7 @@ namespace practica4
             }else
             {
                 this.textoHijo.SaveFile(this.nombre, RichTextBoxStreamType.PlainText);
-                this.originalText = this.GetRichTextBox().Text;
+                this.GetRichTextBox().Modified = false;
             }
             
         }
@@ -100,16 +98,5 @@ namespace practica4
             this.GetRichTextBox().Paste();
         }
 
-        private void textoHijo_TextChanged(object sender, EventArgs e)
-        {
-            if (originalText!=this.GetRichTextBox().Text)
-            {
-                this.GetRichTextBox().Modified = true;
-            }
-            else
-            {
-                this.GetRichTextBox().Modified = false;
-            }
-        }
     }
 }

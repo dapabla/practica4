@@ -52,7 +52,6 @@
             this.textoHijo.Size = new System.Drawing.Size(800, 450);
             this.textoHijo.TabIndex = 0;
             this.textoHijo.Text = "";
-            this.textoHijo.TextChanged += new System.EventHandler(this.textoHijo_TextChanged);
             // 
             // menuStrip1
             // 
