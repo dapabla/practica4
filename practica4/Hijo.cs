@@ -115,5 +115,10 @@ namespace practica4
             }
 
         }
+
+        private void Hijo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

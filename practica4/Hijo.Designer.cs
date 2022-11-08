@@ -169,6 +169,7 @@
             this.Name = "Hijo";
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hijo_FormClosing);
+            this.TextChanged += new System.EventHandler(this.Hijo_TextChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

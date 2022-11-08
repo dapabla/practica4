@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -122,11 +123,10 @@ namespace practica4
             ventana.InitialDirectory = "c:\\";
             DialogResult decision = ventana.ShowDialog();
             String ruta = ventana.FileName;
-            Hijo hijo = new Hijo(ruta);
 
             if (decision==DialogResult.OK)
             {
-                
+                Hijo hijo = new Hijo(ruta);
                 hijo.MdiParent = this;
                 hijo.GetRichTextBox().LoadFile(ventana.FileName, RichTextBoxStreamType.PlainText);
                 hijo.GetRichTextBox().Modified = false;
