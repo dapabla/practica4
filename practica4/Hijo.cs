@@ -57,6 +57,8 @@ namespace practica4
                 this.textoHijo.SaveFile(saveFileDialog.FileName,RichTextBoxStreamType.PlainText);
                 this.GetRichTextBox().Modified = false;
                 this.nombre = saveFileDialog.FileName;
+                Padre p = (Padre)this.MdiParent;
+                p.getTitulo_S().Text = this.Text;
             }
             else if (decision == DialogResult.Cancel)
             {
@@ -113,11 +115,6 @@ namespace practica4
             {
                 fuente.Dispose();
             }
-
-        }
-
-        private void Hijo_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }

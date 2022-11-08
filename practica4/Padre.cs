@@ -156,7 +156,10 @@ namespace practica4
         {
             this.constante_S.Text = "";
         }
-
+        public ToolStripStatusLabel getTitulo_S()
+        {
+            return this.titulo_S;
+        }
 
     }
 }
