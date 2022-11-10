@@ -119,7 +119,7 @@ namespace practica4
         {
             OpenFileDialog ventana = new OpenFileDialog();
             ventana.Title = "Seleccione el archivo a abrir";
-            ventana.Filter = "Archivos de texto|Archivo de texto enriquecido|*.rtf|*.txt|Todos los archivos|*.*";
+            ventana.Filter = "Archivos de texto|*.txt|Archivo de texto enriquecido|*.rtf|Todos los archivos|*.*";
             ventana.InitialDirectory = "c:\\";
             DialogResult decision = ventana.ShowDialog();
             String ruta = ventana.FileName;

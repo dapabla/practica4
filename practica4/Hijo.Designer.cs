@@ -44,10 +44,10 @@
             this.fuente_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.insertar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.parrafo_Hijo = new System.Windows.Forms.ToolStripMenuItem();
-            this.alinearALaIzquierdaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.centrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alinearALaDerechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.justificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alinearizq_Hijo = new System.Windows.Forms.ToolStripMenuItem();
+            this.centrar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
+            this.alineardcha_Hijo = new System.Windows.Forms.ToolStripMenuItem();
+            this.justificar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,9 +55,9 @@
             // 
             this.textoHijo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textoHijo.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoHijo.Location = new System.Drawing.Point(0, 0);
+            this.textoHijo.Location = new System.Drawing.Point(0, 24);
             this.textoHijo.Name = "textoHijo";
-            this.textoHijo.Size = new System.Drawing.Size(800, 450);
+            this.textoHijo.Size = new System.Drawing.Size(800, 426);
             this.textoHijo.TabIndex = 0;
             this.textoHijo.Text = "";
             // 
@@ -185,37 +185,40 @@
             // parrafo_Hijo
             // 
             this.parrafo_Hijo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alinearALaIzquierdaToolStripMenuItem,
-            this.centrarToolStripMenuItem,
-            this.alinearALaDerechaToolStripMenuItem,
-            this.justificarToolStripMenuItem});
+            this.alinearizq_Hijo,
+            this.centrar_Hijo,
+            this.alineardcha_Hijo,
+            this.justificar_Hijo});
             this.parrafo_Hijo.Name = "parrafo_Hijo";
             this.parrafo_Hijo.Size = new System.Drawing.Size(180, 22);
             this.parrafo_Hijo.Text = "Párrafo";
             // 
-            // alinearALaIzquierdaToolStripMenuItem
+            // alinearizq_Hijo
             // 
-            this.alinearALaIzquierdaToolStripMenuItem.Name = "alinearALaIzquierdaToolStripMenuItem";
-            this.alinearALaIzquierdaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.alinearALaIzquierdaToolStripMenuItem.Text = "Alinear a la izquierda";
+            this.alinearizq_Hijo.Name = "alinearizq_Hijo";
+            this.alinearizq_Hijo.Size = new System.Drawing.Size(183, 22);
+            this.alinearizq_Hijo.Text = "Alinear a la izquierda";
+            this.alinearizq_Hijo.Click += new System.EventHandler(this.alinearizq_Hijo_Click);
             // 
-            // centrarToolStripMenuItem
+            // centrar_Hijo
             // 
-            this.centrarToolStripMenuItem.Name = "centrarToolStripMenuItem";
-            this.centrarToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.centrarToolStripMenuItem.Text = "Centrar";
+            this.centrar_Hijo.Name = "centrar_Hijo";
+            this.centrar_Hijo.Size = new System.Drawing.Size(183, 22);
+            this.centrar_Hijo.Text = "Centrar";
+            this.centrar_Hijo.Click += new System.EventHandler(this.centrar_Hijo_Click);
             // 
-            // alinearALaDerechaToolStripMenuItem
+            // alineardcha_Hijo
             // 
-            this.alinearALaDerechaToolStripMenuItem.Name = "alinearALaDerechaToolStripMenuItem";
-            this.alinearALaDerechaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.alinearALaDerechaToolStripMenuItem.Text = "Alinear a la derecha";
+            this.alineardcha_Hijo.Name = "alineardcha_Hijo";
+            this.alineardcha_Hijo.Size = new System.Drawing.Size(183, 22);
+            this.alineardcha_Hijo.Text = "Alinear a la derecha";
+            this.alineardcha_Hijo.Click += new System.EventHandler(this.alineardcha_Hijo_Click);
             // 
-            // justificarToolStripMenuItem
+            // justificar_Hijo
             // 
-            this.justificarToolStripMenuItem.Name = "justificarToolStripMenuItem";
-            this.justificarToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.justificarToolStripMenuItem.Text = "Justificar";
+            this.justificar_Hijo.Name = "justificar_Hijo";
+            this.justificar_Hijo.Size = new System.Drawing.Size(183, 22);
+            this.justificar_Hijo.Text = "Justificar";
             // 
             // Hijo
             // 
@@ -253,9 +256,9 @@
         private System.Windows.Forms.ToolStripMenuItem fuente_Hijo;
         private System.Windows.Forms.ToolStripMenuItem insertar_Hijo;
         private System.Windows.Forms.ToolStripMenuItem parrafo_Hijo;
-        private System.Windows.Forms.ToolStripMenuItem alinearALaIzquierdaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem centrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alinearALaDerechaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem justificarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alinearizq_Hijo;
+        private System.Windows.Forms.ToolStripMenuItem centrar_Hijo;
+        private System.Windows.Forms.ToolStripMenuItem alineardcha_Hijo;
+        private System.Windows.Forms.ToolStripMenuItem justificar_Hijo;
     }
 }

@@ -50,7 +50,7 @@ namespace practica4
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "Seleccione el archivo a guardar";
-            saveFileDialog.Filter = "Archivos de texto|Archivo de texto enriquecido|*.rtf|*.txt|Todos los archivos|*.*";
+            saveFileDialog.Filter = "Archivos de texto|*.txt|Archivo de texto enriquecido|*.rtf|Todos los archivos|*.*";
             saveFileDialog.InitialDirectory = "c:\\";
             DialogResult decision = saveFileDialog.ShowDialog();
 
@@ -145,5 +145,23 @@ namespace practica4
         {
             this.Close();
         }
+
+        private void centrar_Hijo_Click(object sender, EventArgs e)
+        {
+            this.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Center;
+
+        }
+
+        private void alinearizq_Hijo_Click(object sender, EventArgs e)
+        {
+            this.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Left;
+        }
+
+        private void alineardcha_Hijo_Click(object sender, EventArgs e)
+        {
+            this.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Right;
+        }
+
+
     }
 }
