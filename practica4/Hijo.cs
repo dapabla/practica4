@@ -30,7 +30,11 @@ namespace practica4
            
             if (this.GetRichTextBox().Modified==true)
             {
-                if(MessageBox.Show("¿Quieres cerrar sin guardar?", "Aviso", MessageBoxButtons.YesNo) == DialogResult.No)
+                DialogResult decision = MessageBox.Show("¿Quieres cerrar sin guardar?", "Aviso", MessageBoxButtons.YesNoCancel);
+                if ( decision == DialogResult.No)
+                {
+                    guardar_Hijo.PerformClick();
+                }else if (decision == DialogResult.Cancel)
                 {
                     e.Cancel = true;
                 }
@@ -46,7 +50,7 @@ namespace practica4
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "Seleccione el archivo a guardar";
-            saveFileDialog.Filter = "Archivos de texto|*.txt|Todos los archivos|*.*";
+            saveFileDialog.Filter = "Archivos de texto|Archivo de texto enriquecido|*.rtf|*.txt|Todos los archivos|*.*";
             saveFileDialog.InitialDirectory = "c:\\";
             DialogResult decision = saveFileDialog.ShowDialog();
 
@@ -54,7 +58,15 @@ namespace practica4
             {
                 String[] partes = saveFileDialog.FileName.Split('\\');
                 this.Text = partes[partes.Length - 1];
-                this.textoHijo.SaveFile(saveFileDialog.FileName,RichTextBoxStreamType.PlainText);
+                if (saveFileDialog.FileName.EndsWith(".txt"))
+                {
+                    this.textoHijo.SaveFile(saveFileDialog.FileName, RichTextBoxStreamType.PlainText);
+                }
+                if (saveFileDialog.FileName.EndsWith(".rtf"))
+                {
+                    this.textoHijo.SaveFile(saveFileDialog.FileName, RichTextBoxStreamType.RichText);
+                }
+               
                 this.GetRichTextBox().Modified = false;
                 this.nombre = saveFileDialog.FileName;
                 Padre p = (Padre)this.MdiParent;
@@ -73,7 +85,14 @@ namespace practica4
                 guardarComo_Hijo.PerformClick();
             }else
             {
-                this.textoHijo.SaveFile(this.nombre, RichTextBoxStreamType.PlainText);
+                if (this.nombre.EndsWith(".txt"))
+                {
+                    this.textoHijo.SaveFile(this.nombre, RichTextBoxStreamType.PlainText);
+                }
+                if (this.nombre.EndsWith(".rtf"))
+                {
+                    this.textoHijo.SaveFile(this.nombre, RichTextBoxStreamType.RichText);
+                }
                 this.GetRichTextBox().Modified = false;
             }
             
@@ -100,6 +119,11 @@ namespace practica4
             this.GetRichTextBox().Paste();
         }
 
+        public String getNombre()
+        {
+            return this.nombre;
+        }
+
         private void fuente_Hijo_Click(object sender, EventArgs e)
         {
             FontDialog fuente = new FontDialog();
@@ -115,7 +139,11 @@ namespace practica4
             {
                 fuente.Dispose();
             }
+        }
 
+        private void cerrar_Hijo_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

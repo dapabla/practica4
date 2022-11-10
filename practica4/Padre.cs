@@ -119,7 +119,7 @@ namespace practica4
         {
             OpenFileDialog ventana = new OpenFileDialog();
             ventana.Title = "Seleccione el archivo a abrir";
-            ventana.Filter = "Archivos de texto|*.txt|Todos los archivos|*.*";
+            ventana.Filter = "Archivos de texto|Archivo de texto enriquecido|*.rtf|*.txt|Todos los archivos|*.*";
             ventana.InitialDirectory = "c:\\";
             DialogResult decision = ventana.ShowDialog();
             String ruta = ventana.FileName;
@@ -128,7 +128,15 @@ namespace practica4
             {
                 Hijo hijo = new Hijo(ruta);
                 hijo.MdiParent = this;
-                hijo.GetRichTextBox().LoadFile(ventana.FileName, RichTextBoxStreamType.PlainText);
+                if (hijo.getNombre().EndsWith(".txt"))
+                {
+                    hijo.GetRichTextBox().LoadFile(ventana.FileName, RichTextBoxStreamType.PlainText);
+                }
+                if (hijo.getNombre().EndsWith(".rtf"))
+                {
+                    hijo.GetRichTextBox().LoadFile(ventana.FileName, RichTextBoxStreamType.RichText);
+                }
+                
                 hijo.GetRichTextBox().Modified = false;
                 String[] partes = ventana.FileName.Split('\\');
                 hijo.Text = partes[partes.Length-1];
@@ -161,5 +169,12 @@ namespace practica4
             return this.titulo_S;
         }
 
+        private void cerrarTodo_Padre_Click(object sender, EventArgs e)
+        {
+            foreach(Hijo hijo in this.MdiChildren)
+            {
+                hijo.Close();
+            }
+        }
     }
 }

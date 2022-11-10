@@ -40,7 +40,14 @@
             this.cortar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.copiar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.pegar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
+            this.diseño_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.fuente_Hijo = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
+            this.parrafo_Hijo = new System.Windows.Forms.ToolStripMenuItem();
+            this.alinearALaIzquierdaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.centrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alinearALaDerechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.justificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +66,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivo_Hijo,
             this.edicion_Hijo,
-            this.fuente_Hijo});
+            this.diseño_Hijo});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -83,7 +90,7 @@
             this.guardar_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.guardar_Hijo.MergeIndex = 2;
             this.guardar_Hijo.Name = "guardar_Hijo";
-            this.guardar_Hijo.Size = new System.Drawing.Size(150, 22);
+            this.guardar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.guardar_Hijo.Text = "Guardar";
             this.guardar_Hijo.Click += new System.EventHandler(this.guardar_Hijo_Click);
             // 
@@ -92,7 +99,7 @@
             this.guardarComo_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.guardarComo_Hijo.MergeIndex = 3;
             this.guardarComo_Hijo.Name = "guardarComo_Hijo";
-            this.guardarComo_Hijo.Size = new System.Drawing.Size(150, 22);
+            this.guardarComo_Hijo.Size = new System.Drawing.Size(180, 22);
             this.guardarComo_Hijo.Text = "Guardar como";
             this.guardarComo_Hijo.Click += new System.EventHandler(this.guardarComo_Hijo_Click);
             // 
@@ -101,8 +108,9 @@
             this.cerrar_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.cerrar_Hijo.MergeIndex = 5;
             this.cerrar_Hijo.Name = "cerrar_Hijo";
-            this.cerrar_Hijo.Size = new System.Drawing.Size(150, 22);
+            this.cerrar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.cerrar_Hijo.Text = "Cerrar";
+            this.cerrar_Hijo.Click += new System.EventHandler(this.cerrar_Hijo_Click);
             // 
             // edicion_Hijo
             // 
@@ -151,12 +159,63 @@
             this.pegar_Hijo.Text = "Pegar";
             this.pegar_Hijo.Click += new System.EventHandler(this.pegar_Hijo_Click);
             // 
+            // diseño_Hijo
+            // 
+            this.diseño_Hijo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fuente_Hijo,
+            this.insertar_Hijo,
+            this.parrafo_Hijo});
+            this.diseño_Hijo.Name = "diseño_Hijo";
+            this.diseño_Hijo.Size = new System.Drawing.Size(55, 20);
+            this.diseño_Hijo.Text = "Diseño";
+            // 
             // fuente_Hijo
             // 
             this.fuente_Hijo.Name = "fuente_Hijo";
-            this.fuente_Hijo.Size = new System.Drawing.Size(55, 20);
+            this.fuente_Hijo.Size = new System.Drawing.Size(180, 22);
             this.fuente_Hijo.Text = "Fuente";
             this.fuente_Hijo.Click += new System.EventHandler(this.fuente_Hijo_Click);
+            // 
+            // insertar_Hijo
+            // 
+            this.insertar_Hijo.Name = "insertar_Hijo";
+            this.insertar_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.insertar_Hijo.Text = "Insertar";
+            // 
+            // parrafo_Hijo
+            // 
+            this.parrafo_Hijo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alinearALaIzquierdaToolStripMenuItem,
+            this.centrarToolStripMenuItem,
+            this.alinearALaDerechaToolStripMenuItem,
+            this.justificarToolStripMenuItem});
+            this.parrafo_Hijo.Name = "parrafo_Hijo";
+            this.parrafo_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.parrafo_Hijo.Text = "Párrafo";
+            // 
+            // alinearALaIzquierdaToolStripMenuItem
+            // 
+            this.alinearALaIzquierdaToolStripMenuItem.Name = "alinearALaIzquierdaToolStripMenuItem";
+            this.alinearALaIzquierdaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.alinearALaIzquierdaToolStripMenuItem.Text = "Alinear a la izquierda";
+            // 
+            // centrarToolStripMenuItem
+            // 
+            this.centrarToolStripMenuItem.Name = "centrarToolStripMenuItem";
+            this.centrarToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.centrarToolStripMenuItem.Text = "Centrar";
+            // 
+            // alinearALaDerechaToolStripMenuItem
+            // 
+            this.alinearALaDerechaToolStripMenuItem.Name = "alinearALaDerechaToolStripMenuItem";
+            this.alinearALaDerechaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.alinearALaDerechaToolStripMenuItem.Text = "Alinear a la derecha";
+            // 
+            // justificarToolStripMenuItem
+            // 
+            this.justificarToolStripMenuItem.Name = "justificarToolStripMenuItem";
+            this.justificarToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.justificarToolStripMenuItem.Text = "Justificar";
             // 
             // Hijo
             // 
@@ -190,6 +249,13 @@
         private System.Windows.Forms.ToolStripMenuItem copiar_Hijo;
         private System.Windows.Forms.ToolStripMenuItem pegar_Hijo;
         private System.Windows.Forms.ToolStripSeparator separadorEdicion_Hijo;
+        private System.Windows.Forms.ToolStripMenuItem diseño_Hijo;
         private System.Windows.Forms.ToolStripMenuItem fuente_Hijo;
+        private System.Windows.Forms.ToolStripMenuItem insertar_Hijo;
+        private System.Windows.Forms.ToolStripMenuItem parrafo_Hijo;
+        private System.Windows.Forms.ToolStripMenuItem alinearALaIzquierdaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem centrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alinearALaDerechaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem justificarToolStripMenuItem;
     }
 }
