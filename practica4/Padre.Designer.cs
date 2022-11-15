@@ -287,11 +287,11 @@
             // 
             // alinear_izquierda
             // 
-            this.alinear_izquierda.CheckOnClick = true;
             this.alinear_izquierda.Image = global::practica4.Properties.Resources.izquierda;
             this.alinear_izquierda.Name = "alinear_izquierda";
             this.alinear_izquierda.Size = new System.Drawing.Size(180, 22);
             this.alinear_izquierda.Text = "izquierda";
+            this.alinear_izquierda.Click += new System.EventHandler(this.alinear_izquierda_Click);
             // 
             // alinear_centro
             // 
@@ -300,6 +300,7 @@
             this.alinear_centro.Name = "alinear_centro";
             this.alinear_centro.Size = new System.Drawing.Size(180, 22);
             this.alinear_centro.Text = "centrar";
+            this.alinear_centro.Click += new System.EventHandler(this.alinear_centro_Click);
             // 
             // alinear_derecha
             // 
@@ -308,6 +309,7 @@
             this.alinear_derecha.Name = "alinear_derecha";
             this.alinear_derecha.Size = new System.Drawing.Size(180, 22);
             this.alinear_derecha.Text = "derecha";
+            this.alinear_derecha.Click += new System.EventHandler(this.alinear_derecha_Click);
             // 
             // Padre
             // 

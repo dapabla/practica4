@@ -208,5 +208,23 @@ namespace practica4
             Hijo activo = (Hijo)this.ActiveMdiChild;
             activo.GetRichTextBox().Redo();
         }
+
+        private void alinear_izquierda_Click(object sender, EventArgs e)
+        {
+            Hijo activo = (Hijo)this.ActiveMdiChild;
+            activo.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Left;
+        }
+
+        private void alinear_centro_Click(object sender, EventArgs e)
+        {
+            Hijo activo = (Hijo)this.ActiveMdiChild;
+            activo.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Center;
+        }
+
+        private void alinear_derecha_Click(object sender, EventArgs e)
+        {
+            Hijo activo = (Hijo)this.ActiveMdiChild;
+            activo.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Right;
+        }
     }
 }
