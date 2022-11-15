@@ -22,6 +22,8 @@ namespace practica4
             this.deshacer_boton.Enabled = false;
             this.hacer_boton.Enabled = false;
             this.alinear.Enabled = false;
+            this.negrita.Enabled = false;   
+            this.cursiva.Enabled = false;
 
             foreach (ToolStripMenuItem x in this.mStrip.Items)
             {
@@ -102,6 +104,8 @@ namespace practica4
                 this.deshacer_boton.Enabled = false;
                 this.hacer_boton.Enabled = false;
                 this.alinear.Enabled = false;
+                this.negrita.Enabled = false;
+                this.cursiva.Enabled = false;
             }
             else
             {
@@ -110,6 +114,8 @@ namespace practica4
                 this.deshacer_boton.Enabled = true;
                 this.hacer_boton.Enabled = true;
                 this.alinear.Enabled = true;
+                this.negrita.Enabled = true;
+                this.cursiva.Enabled = true;
             }
         }
 
@@ -230,6 +236,31 @@ namespace practica4
         private void negrita_Click(object sender, EventArgs e)
         {
             Hijo activo = (Hijo)this.ActiveMdiChild;
+            if (activo.GetRichTextBox().Font.Bold)
+            {
+                activo.GetRichTextBox().Font = new Font(activo.GetRichTextBox().Font, FontStyle.Regular);
+                negrita.Checked = false;
+            }
+            else
+            {
+                activo.GetRichTextBox().Font = new Font(activo.GetRichTextBox().Font, FontStyle.Bold);
+                negrita.Checked = true;
+            }
+        }
+
+        private void cursiva_Click(object sender, EventArgs e)
+        {
+            Hijo activo = (Hijo)this.ActiveMdiChild;
+            if (activo.GetRichTextBox().Font.Italic)
+            {
+                activo.GetRichTextBox().Font = new Font(activo.GetRichTextBox().Font, FontStyle.Regular);
+                cursiva.Checked = false;
+            }
+            else
+            {
+                activo.GetRichTextBox().Font = new Font(activo.GetRichTextBox().Font, FontStyle.Italic);
+                cursiva.Checked = true;
+            }
         }
     }
 }

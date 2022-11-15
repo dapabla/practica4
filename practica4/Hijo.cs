@@ -161,5 +161,9 @@ namespace practica4
                 fuente.Dispose();
             }
         }
+        public Font getFont()
+        {
+            return this.GetRichTextBox().Font;
+        }
     }
 }

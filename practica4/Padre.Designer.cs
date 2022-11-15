@@ -319,7 +319,7 @@
             // negrita
             // 
             this.negrita.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.negrita.Image = ((System.Drawing.Image)(resources.GetObject("negrita.Image")));
+            this.negrita.Image = global::practica4.Properties.Resources.negrita;
             this.negrita.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.negrita.Name = "negrita";
             this.negrita.Size = new System.Drawing.Size(23, 22);
@@ -334,6 +334,7 @@
             this.cursiva.Name = "cursiva";
             this.cursiva.Size = new System.Drawing.Size(23, 22);
             this.cursiva.Text = "toolStripButton2";
+            this.cursiva.Click += new System.EventHandler(this.cursiva_Click);
             // 
             // Padre
             // 
