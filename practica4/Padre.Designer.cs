@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Padre));
             this.mStrip = new System.Windows.Forms.MenuStrip();
             this.apartado1 = new System.Windows.Forms.ToolStripMenuItem();
             this.a1_sub1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,8 +47,11 @@
             this.barraEstado_Padre = new System.Windows.Forms.StatusStrip();
             this.constante_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.titulo_S = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.nuevo_boton = new System.Windows.Forms.ToolStripButton();
             this.mStrip.SuspendLayout();
             this.barraEstado_Padre.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mStrip
@@ -78,33 +82,33 @@
             // a1_sub1
             // 
             this.a1_sub1.Name = "a1_sub1";
-            this.a1_sub1.Size = new System.Drawing.Size(180, 22);
+            this.a1_sub1.Size = new System.Drawing.Size(134, 22);
             this.a1_sub1.Text = "Nuevo";
             this.a1_sub1.Click += new System.EventHandler(this.a1_sub1_Click);
             // 
             // abrir_Padre
             // 
             this.abrir_Padre.Name = "abrir_Padre";
-            this.abrir_Padre.Size = new System.Drawing.Size(180, 22);
+            this.abrir_Padre.Size = new System.Drawing.Size(134, 22);
             this.abrir_Padre.Text = "Abrir";
             this.abrir_Padre.Click += new System.EventHandler(this.abrir_Padre_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(131, 6);
             // 
             // cerrarTodo_Padre
             // 
             this.cerrarTodo_Padre.Name = "cerrarTodo_Padre";
-            this.cerrarTodo_Padre.Size = new System.Drawing.Size(180, 22);
+            this.cerrarTodo_Padre.Size = new System.Drawing.Size(134, 22);
             this.cerrarTodo_Padre.Text = "Cerrar todo";
             this.cerrarTodo_Padre.Click += new System.EventHandler(this.cerrarTodo_Padre_Click);
             // 
             // a1_sub2
             // 
             this.a1_sub2.Name = "a1_sub2";
-            this.a1_sub2.Size = new System.Drawing.Size(180, 22);
+            this.a1_sub2.Size = new System.Drawing.Size(134, 22);
             this.a1_sub2.Text = "Salir";
             this.a1_sub2.Click += new System.EventHandler(this.a1_sub2_Click);
             // 
@@ -194,11 +198,31 @@
             this.titulo_S.Spring = true;
             this.titulo_S.Text = "toolStripStatusLabel2";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevo_boton});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(840, 25);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // nuevo_boton
+            // 
+            this.nuevo_boton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.nuevo_boton.Image = ((System.Drawing.Image)(resources.GetObject("nuevo_boton.Image")));
+            this.nuevo_boton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.nuevo_boton.Name = "nuevo_boton";
+            this.nuevo_boton.Size = new System.Drawing.Size(23, 22);
+            this.nuevo_boton.Text = "toolStripButton1";
+            // 
             // Padre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.barraEstado_Padre);
             this.Controls.Add(this.mStrip);
             this.IsMdiContainer = true;
@@ -211,6 +235,8 @@
             this.mStrip.PerformLayout();
             this.barraEstado_Padre.ResumeLayout(false);
             this.barraEstado_Padre.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,6 +262,8 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarTodo_Padre;
         private System.Windows.Forms.ToolStripMenuItem ver_Padre;
         private System.Windows.Forms.ToolStripMenuItem barraDeEstadoVer_Padre;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton nuevo_boton;
     }
 }
 

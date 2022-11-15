@@ -42,12 +42,10 @@
             this.pegar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.diseño_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.fuente_Hijo = new System.Windows.Forms.ToolStripMenuItem();
-            this.insertar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.parrafo_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.alinearizq_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.centrar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.alineardcha_Hijo = new System.Windows.Forms.ToolStripMenuItem();
-            this.justificar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,7 +88,7 @@
             this.guardar_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.guardar_Hijo.MergeIndex = 2;
             this.guardar_Hijo.Name = "guardar_Hijo";
-            this.guardar_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.guardar_Hijo.Size = new System.Drawing.Size(150, 22);
             this.guardar_Hijo.Text = "Guardar";
             this.guardar_Hijo.Click += new System.EventHandler(this.guardar_Hijo_Click);
             // 
@@ -99,7 +97,7 @@
             this.guardarComo_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.guardarComo_Hijo.MergeIndex = 3;
             this.guardarComo_Hijo.Name = "guardarComo_Hijo";
-            this.guardarComo_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.guardarComo_Hijo.Size = new System.Drawing.Size(150, 22);
             this.guardarComo_Hijo.Text = "Guardar como";
             this.guardarComo_Hijo.Click += new System.EventHandler(this.guardarComo_Hijo_Click);
             // 
@@ -108,7 +106,7 @@
             this.cerrar_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.cerrar_Hijo.MergeIndex = 5;
             this.cerrar_Hijo.Name = "cerrar_Hijo";
-            this.cerrar_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.cerrar_Hijo.Size = new System.Drawing.Size(150, 22);
             this.cerrar_Hijo.Text = "Cerrar";
             this.cerrar_Hijo.Click += new System.EventHandler(this.cerrar_Hijo_Click);
             // 
@@ -163,7 +161,6 @@
             // 
             this.diseño_Hijo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fuente_Hijo,
-            this.insertar_Hijo,
             this.parrafo_Hijo});
             this.diseño_Hijo.Name = "diseño_Hijo";
             this.diseño_Hijo.Size = new System.Drawing.Size(55, 20);
@@ -176,19 +173,12 @@
             this.fuente_Hijo.Text = "Fuente";
             this.fuente_Hijo.Click += new System.EventHandler(this.fuente_Hijo_Click);
             // 
-            // insertar_Hijo
-            // 
-            this.insertar_Hijo.Name = "insertar_Hijo";
-            this.insertar_Hijo.Size = new System.Drawing.Size(180, 22);
-            this.insertar_Hijo.Text = "Insertar";
-            // 
             // parrafo_Hijo
             // 
             this.parrafo_Hijo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.alinearizq_Hijo,
             this.centrar_Hijo,
-            this.alineardcha_Hijo,
-            this.justificar_Hijo});
+            this.alineardcha_Hijo});
             this.parrafo_Hijo.Name = "parrafo_Hijo";
             this.parrafo_Hijo.Size = new System.Drawing.Size(180, 22);
             this.parrafo_Hijo.Text = "Párrafo";
@@ -213,12 +203,6 @@
             this.alineardcha_Hijo.Size = new System.Drawing.Size(183, 22);
             this.alineardcha_Hijo.Text = "Alinear a la derecha";
             this.alineardcha_Hijo.Click += new System.EventHandler(this.alineardcha_Hijo_Click);
-            // 
-            // justificar_Hijo
-            // 
-            this.justificar_Hijo.Name = "justificar_Hijo";
-            this.justificar_Hijo.Size = new System.Drawing.Size(183, 22);
-            this.justificar_Hijo.Text = "Justificar";
             // 
             // Hijo
             // 
@@ -254,11 +238,9 @@
         private System.Windows.Forms.ToolStripSeparator separadorEdicion_Hijo;
         private System.Windows.Forms.ToolStripMenuItem diseño_Hijo;
         private System.Windows.Forms.ToolStripMenuItem fuente_Hijo;
-        private System.Windows.Forms.ToolStripMenuItem insertar_Hijo;
         private System.Windows.Forms.ToolStripMenuItem parrafo_Hijo;
         private System.Windows.Forms.ToolStripMenuItem alinearizq_Hijo;
         private System.Windows.Forms.ToolStripMenuItem centrar_Hijo;
         private System.Windows.Forms.ToolStripMenuItem alineardcha_Hijo;
-        private System.Windows.Forms.ToolStripMenuItem justificar_Hijo;
     }
 }

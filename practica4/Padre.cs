@@ -30,6 +30,7 @@ namespace practica4
                 {
                     y.MouseHover += new EventHandler(menuHover);
                     y.MouseLeave += new EventHandler(menuLeave);
+                    
                 }
             }
 
