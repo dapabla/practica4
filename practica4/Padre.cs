@@ -19,6 +19,9 @@ namespace practica4
             InitializeComponent();
             this.apartado2.Visible = false;
             this.titulo_S.Text = "";
+            this.deshacer_boton.Enabled = false;
+            this.hacer_boton.Enabled = false;
+            this.alinear.Enabled = false;
 
             foreach (ToolStripMenuItem x in this.mStrip.Items)
             {
@@ -96,11 +99,17 @@ namespace practica4
             {
                 this.apartado2.Visible = false;
                 this.titulo_S.Text = "";
+                this.deshacer_boton.Enabled = false;
+                this.hacer_boton.Enabled = false;
+                this.alinear.Enabled = false;
             }
             else
             {
                 this.apartado2.Visible = true;
                 this.titulo_S.Text = this.ActiveMdiChild.Text;
+                this.deshacer_boton.Enabled = true;
+                this.hacer_boton.Enabled = true;
+                this.alinear.Enabled = true;
             }
         }
 
