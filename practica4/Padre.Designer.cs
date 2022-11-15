@@ -52,6 +52,7 @@
             this.abrir_boton = new System.Windows.Forms.ToolStripButton();
             this.deshacer_boton = new System.Windows.Forms.ToolStripButton();
             this.hacer_boton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.mStrip.SuspendLayout();
             this.barraEstado_Padre.SuspendLayout();
             this.herramientas_Padre.SuspendLayout();
@@ -208,7 +209,8 @@
             this.abrir_boton,
             this.toolStripSeparator3,
             this.deshacer_boton,
-            this.hacer_boton});
+            this.hacer_boton,
+            this.toolStripSeparator4});
             this.herramientas_Padre.Location = new System.Drawing.Point(0, 24);
             this.herramientas_Padre.Name = "herramientas_Padre";
             this.herramientas_Padre.Size = new System.Drawing.Size(840, 25);
@@ -259,6 +261,11 @@
             this.hacer_boton.Size = new System.Drawing.Size(23, 22);
             this.hacer_boton.Text = "toolStripButton2";
             this.hacer_boton.Click += new System.EventHandler(this.hacer_boton_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // Padre
             // 
@@ -311,6 +318,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton deshacer_boton;
         private System.Windows.Forms.ToolStripButton hacer_boton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
 
