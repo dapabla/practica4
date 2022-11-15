@@ -46,12 +46,15 @@
             this.barraEstado_Padre = new System.Windows.Forms.StatusStrip();
             this.constante_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.titulo_S = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.herramientas_Padre = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.nuevo_boton = new System.Windows.Forms.ToolStripButton();
             this.abrir_boton = new System.Windows.Forms.ToolStripButton();
+            this.deshacer_boton = new System.Windows.Forms.ToolStripButton();
+            this.hacer_boton = new System.Windows.Forms.ToolStripButton();
             this.mStrip.SuspendLayout();
             this.barraEstado_Padre.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.herramientas_Padre.SuspendLayout();
             this.SuspendLayout();
             // 
             // mStrip
@@ -198,16 +201,24 @@
             this.titulo_S.Spring = true;
             this.titulo_S.Text = "toolStripStatusLabel2";
             // 
-            // toolStrip1
+            // herramientas_Padre
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.herramientas_Padre.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevo_boton,
-            this.abrir_boton});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(840, 25);
-            this.toolStrip1.TabIndex = 4;
-            this.toolStrip1.Text = "toolStrip1";
+            this.abrir_boton,
+            this.toolStripSeparator3,
+            this.deshacer_boton,
+            this.hacer_boton});
+            this.herramientas_Padre.Location = new System.Drawing.Point(0, 24);
+            this.herramientas_Padre.Name = "herramientas_Padre";
+            this.herramientas_Padre.Size = new System.Drawing.Size(840, 25);
+            this.herramientas_Padre.TabIndex = 4;
+            this.herramientas_Padre.Text = "toolStrip1";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // nuevo_boton
             // 
@@ -229,12 +240,32 @@
             this.abrir_boton.Text = "toolStripButton1";
             this.abrir_boton.Click += new System.EventHandler(this.abrir_boton_Click);
             // 
+            // deshacer_boton
+            // 
+            this.deshacer_boton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.deshacer_boton.Image = global::practica4.Properties.Resources.deshacer;
+            this.deshacer_boton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.deshacer_boton.Name = "deshacer_boton";
+            this.deshacer_boton.Size = new System.Drawing.Size(23, 22);
+            this.deshacer_boton.Text = "toolStripButton1";
+            this.deshacer_boton.Click += new System.EventHandler(this.deshacer_boton_Click);
+            // 
+            // hacer_boton
+            // 
+            this.hacer_boton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.hacer_boton.Image = global::practica4.Properties.Resources.redo;
+            this.hacer_boton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.hacer_boton.Name = "hacer_boton";
+            this.hacer_boton.Size = new System.Drawing.Size(23, 22);
+            this.hacer_boton.Text = "toolStripButton2";
+            this.hacer_boton.Click += new System.EventHandler(this.hacer_boton_Click);
+            // 
             // Padre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 450);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.herramientas_Padre);
             this.Controls.Add(this.barraEstado_Padre);
             this.Controls.Add(this.mStrip);
             this.IsMdiContainer = true;
@@ -247,8 +278,8 @@
             this.mStrip.PerformLayout();
             this.barraEstado_Padre.ResumeLayout(false);
             this.barraEstado_Padre.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.herramientas_Padre.ResumeLayout(false);
+            this.herramientas_Padre.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,9 +305,12 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarTodo_Padre;
         private System.Windows.Forms.ToolStripMenuItem ver_Padre;
         private System.Windows.Forms.ToolStripMenuItem barraDeEstadoVer_Padre;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip herramientas_Padre;
         private System.Windows.Forms.ToolStripButton nuevo_boton;
         private System.Windows.Forms.ToolStripButton abrir_boton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton deshacer_boton;
+        private System.Windows.Forms.ToolStripButton hacer_boton;
     }
 }
 

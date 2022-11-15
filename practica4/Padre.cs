@@ -187,5 +187,17 @@ namespace practica4
         {
             abrir_Padre.PerformClick();
         }
+
+        private void deshacer_boton_Click(object sender, EventArgs e)
+        {
+            Hijo activo = (Hijo)this.ActiveMdiChild;
+            activo.GetRichTextBox().Undo();
+        }
+
+        private void hacer_boton_Click(object sender, EventArgs e)
+        {
+            Hijo activo = (Hijo)this.ActiveMdiChild;
+            activo.GetRichTextBox().Redo();
+        }
     }
 }
