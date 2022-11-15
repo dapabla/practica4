@@ -145,26 +145,8 @@ namespace practica4
         {
             this.Close();
         }
-
-        private void centrar_Hijo_Click(object sender, EventArgs e)
+        private void fuente_Hijo_Click_1(object sender, EventArgs e)
         {
-            this.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Center;
-
-        }
-
-        private void alinearizq_Hijo_Click(object sender, EventArgs e)
-        {
-            this.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Left;
-        }
-
-        private void alineardcha_Hijo_Click(object sender, EventArgs e)
-        {
-            this.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Right;
-        }
-
-        private void diseño_Hijo_Click(object sender, EventArgs e)
-        {
-
             FontDialog fuente = new FontDialog();
             fuente.ShowColor = true;
             fuente.Font = this.GetRichTextBox().Font;

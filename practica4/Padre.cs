@@ -226,5 +226,10 @@ namespace practica4
             Hijo activo = (Hijo)this.ActiveMdiChild;
             activo.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Right;
         }
+
+        private void negrita_Click(object sender, EventArgs e)
+        {
+            Hijo activo = (Hijo)this.ActiveMdiChild;
+        }
     }
 }
