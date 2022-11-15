@@ -177,5 +177,15 @@ namespace practica4
                 hijo.Close();
             }
         }
+
+        private void nuevo_boton_Click(object sender, EventArgs e)
+        {
+            a1_sub1.PerformClick();
+        }
+
+        private void abrir_boton_Click(object sender, EventArgs e)
+        {
+            abrir_Padre.PerformClick();
+        }
     }
 }

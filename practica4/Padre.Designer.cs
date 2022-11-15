@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Padre));
             this.mStrip = new System.Windows.Forms.MenuStrip();
             this.apartado1 = new System.Windows.Forms.ToolStripMenuItem();
             this.a1_sub1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +48,7 @@
             this.titulo_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.nuevo_boton = new System.Windows.Forms.ToolStripButton();
+            this.abrir_boton = new System.Windows.Forms.ToolStripButton();
             this.mStrip.SuspendLayout();
             this.barraEstado_Padre.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -201,7 +201,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevo_boton});
+            this.nuevo_boton,
+            this.abrir_boton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(840, 25);
@@ -211,11 +212,22 @@
             // nuevo_boton
             // 
             this.nuevo_boton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.nuevo_boton.Image = ((System.Drawing.Image)(resources.GetObject("nuevo_boton.Image")));
+            this.nuevo_boton.Image = global::practica4.Properties.Resources.nuevo;
             this.nuevo_boton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.nuevo_boton.Name = "nuevo_boton";
             this.nuevo_boton.Size = new System.Drawing.Size(23, 22);
             this.nuevo_boton.Text = "toolStripButton1";
+            this.nuevo_boton.Click += new System.EventHandler(this.nuevo_boton_Click);
+            // 
+            // abrir_boton
+            // 
+            this.abrir_boton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.abrir_boton.Image = global::practica4.Properties.Resources.abrir;
+            this.abrir_boton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.abrir_boton.Name = "abrir_boton";
+            this.abrir_boton.Size = new System.Drawing.Size(23, 22);
+            this.abrir_boton.Text = "toolStripButton1";
+            this.abrir_boton.Click += new System.EventHandler(this.abrir_boton_Click);
             // 
             // Padre
             // 
@@ -264,6 +276,7 @@
         private System.Windows.Forms.ToolStripMenuItem barraDeEstadoVer_Padre;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton nuevo_boton;
+        private System.Windows.Forms.ToolStripButton abrir_boton;
     }
 }
 

@@ -169,7 +169,7 @@
             // fuente_Hijo
             // 
             this.fuente_Hijo.Name = "fuente_Hijo";
-            this.fuente_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.fuente_Hijo.Size = new System.Drawing.Size(112, 22);
             this.fuente_Hijo.Text = "Fuente";
             this.fuente_Hijo.Click += new System.EventHandler(this.fuente_Hijo_Click);
             // 
@@ -180,7 +180,7 @@
             this.centrar_Hijo,
             this.alineardcha_Hijo});
             this.parrafo_Hijo.Name = "parrafo_Hijo";
-            this.parrafo_Hijo.Size = new System.Drawing.Size(180, 22);
+            this.parrafo_Hijo.Size = new System.Drawing.Size(112, 22);
             this.parrafo_Hijo.Text = "Párrafo";
             // 
             // alinearizq_Hijo
