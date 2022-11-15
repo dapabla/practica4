@@ -40,7 +40,6 @@
             this.cortar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.copiar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.pegar_Hijo = new System.Windows.Forms.ToolStripMenuItem();
-            this.diseño_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.fuente_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.parrafo_Hijo = new System.Windows.Forms.ToolStripMenuItem();
             this.alinearizq_Hijo = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +63,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivo_Hijo,
             this.edicion_Hijo,
-            this.diseño_Hijo});
+            this.fuente_Hijo});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -127,51 +126,44 @@
             // deshacer_Hijo
             // 
             this.deshacer_Hijo.Name = "deshacer_Hijo";
-            this.deshacer_Hijo.Size = new System.Drawing.Size(122, 22);
+            this.deshacer_Hijo.Size = new System.Drawing.Size(180, 22);
             this.deshacer_Hijo.Text = "Deshacer";
             this.deshacer_Hijo.Click += new System.EventHandler(this.deshacer_Hijo_Click);
             // 
             // separadorEdicion_Hijo
             // 
             this.separadorEdicion_Hijo.Name = "separadorEdicion_Hijo";
-            this.separadorEdicion_Hijo.Size = new System.Drawing.Size(119, 6);
+            this.separadorEdicion_Hijo.Size = new System.Drawing.Size(177, 6);
             // 
             // cortar_Hijo
             // 
             this.cortar_Hijo.Name = "cortar_Hijo";
-            this.cortar_Hijo.Size = new System.Drawing.Size(122, 22);
+            this.cortar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.cortar_Hijo.Text = "Cortar";
             this.cortar_Hijo.Click += new System.EventHandler(this.cortar_Hijo_Click);
             // 
             // copiar_Hijo
             // 
             this.copiar_Hijo.Name = "copiar_Hijo";
-            this.copiar_Hijo.Size = new System.Drawing.Size(122, 22);
+            this.copiar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.copiar_Hijo.Text = "Copiar";
             this.copiar_Hijo.Click += new System.EventHandler(this.copiar_Hijo_Click);
             // 
             // pegar_Hijo
             // 
             this.pegar_Hijo.Name = "pegar_Hijo";
-            this.pegar_Hijo.Size = new System.Drawing.Size(122, 22);
+            this.pegar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.pegar_Hijo.Text = "Pegar";
             this.pegar_Hijo.Click += new System.EventHandler(this.pegar_Hijo_Click);
             // 
-            // diseño_Hijo
-            // 
-            this.diseño_Hijo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fuente_Hijo,
-            this.parrafo_Hijo});
-            this.diseño_Hijo.Name = "diseño_Hijo";
-            this.diseño_Hijo.Size = new System.Drawing.Size(55, 20);
-            this.diseño_Hijo.Text = "Diseño";
-            // 
             // fuente_Hijo
             // 
+            this.fuente_Hijo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.parrafo_Hijo});
             this.fuente_Hijo.Name = "fuente_Hijo";
-            this.fuente_Hijo.Size = new System.Drawing.Size(112, 22);
+            this.fuente_Hijo.Size = new System.Drawing.Size(55, 20);
             this.fuente_Hijo.Text = "Fuente";
-            this.fuente_Hijo.Click += new System.EventHandler(this.fuente_Hijo_Click);
+            this.fuente_Hijo.Click += new System.EventHandler(this.diseño_Hijo_Click);
             // 
             // parrafo_Hijo
             // 
@@ -180,7 +172,7 @@
             this.centrar_Hijo,
             this.alineardcha_Hijo});
             this.parrafo_Hijo.Name = "parrafo_Hijo";
-            this.parrafo_Hijo.Size = new System.Drawing.Size(112, 22);
+            this.parrafo_Hijo.Size = new System.Drawing.Size(180, 22);
             this.parrafo_Hijo.Text = "Párrafo";
             // 
             // alinearizq_Hijo
@@ -236,7 +228,6 @@
         private System.Windows.Forms.ToolStripMenuItem copiar_Hijo;
         private System.Windows.Forms.ToolStripMenuItem pegar_Hijo;
         private System.Windows.Forms.ToolStripSeparator separadorEdicion_Hijo;
-        private System.Windows.Forms.ToolStripMenuItem diseño_Hijo;
         private System.Windows.Forms.ToolStripMenuItem fuente_Hijo;
         private System.Windows.Forms.ToolStripMenuItem parrafo_Hijo;
         private System.Windows.Forms.ToolStripMenuItem alinearizq_Hijo;

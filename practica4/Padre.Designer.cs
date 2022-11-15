@@ -48,11 +48,15 @@
             this.titulo_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.herramientas_Padre = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.nuevo_boton = new System.Windows.Forms.ToolStripButton();
             this.abrir_boton = new System.Windows.Forms.ToolStripButton();
             this.deshacer_boton = new System.Windows.Forms.ToolStripButton();
             this.hacer_boton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.alinear = new System.Windows.Forms.ToolStripDropDownButton();
+            this.alinear_izquierda = new System.Windows.Forms.ToolStripMenuItem();
+            this.alinear_centro = new System.Windows.Forms.ToolStripMenuItem();
+            this.alinear_derecha = new System.Windows.Forms.ToolStripMenuItem();
             this.mStrip.SuspendLayout();
             this.barraEstado_Padre.SuspendLayout();
             this.herramientas_Padre.SuspendLayout();
@@ -210,7 +214,8 @@
             this.toolStripSeparator3,
             this.deshacer_boton,
             this.hacer_boton,
-            this.toolStripSeparator4});
+            this.toolStripSeparator4,
+            this.alinear});
             this.herramientas_Padre.Location = new System.Drawing.Point(0, 24);
             this.herramientas_Padre.Name = "herramientas_Padre";
             this.herramientas_Padre.Size = new System.Drawing.Size(840, 25);
@@ -221,6 +226,11 @@
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // nuevo_boton
             // 
@@ -262,10 +272,36 @@
             this.hacer_boton.Text = "toolStripButton2";
             this.hacer_boton.Click += new System.EventHandler(this.hacer_boton_Click);
             // 
-            // toolStripSeparator4
+            // alinear
             // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            this.alinear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.alinear.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alinear_izquierda,
+            this.alinear_centro,
+            this.alinear_derecha});
+            this.alinear.Image = global::practica4.Properties.Resources.alinear;
+            this.alinear.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.alinear.Name = "alinear";
+            this.alinear.Size = new System.Drawing.Size(29, 22);
+            this.alinear.Text = "toolStripDropDownButton1";
+            // 
+            // alinear_izquierda
+            // 
+            this.alinear_izquierda.Name = "alinear_izquierda";
+            this.alinear_izquierda.Size = new System.Drawing.Size(180, 22);
+            this.alinear_izquierda.Text = "izquierda";
+            // 
+            // alinear_centro
+            // 
+            this.alinear_centro.Name = "alinear_centro";
+            this.alinear_centro.Size = new System.Drawing.Size(180, 22);
+            this.alinear_centro.Text = "centrar";
+            // 
+            // alinear_derecha
+            // 
+            this.alinear_derecha.Name = "alinear_derecha";
+            this.alinear_derecha.Size = new System.Drawing.Size(180, 22);
+            this.alinear_derecha.Text = "derecha";
             // 
             // Padre
             // 
@@ -319,6 +355,10 @@
         private System.Windows.Forms.ToolStripButton deshacer_boton;
         private System.Windows.Forms.ToolStripButton hacer_boton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripDropDownButton alinear;
+        private System.Windows.Forms.ToolStripMenuItem alinear_izquierda;
+        private System.Windows.Forms.ToolStripMenuItem alinear_centro;
+        private System.Windows.Forms.ToolStripMenuItem alinear_derecha;
     }
 }
 

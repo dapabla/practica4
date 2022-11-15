@@ -128,5 +128,8 @@
   <ItemGroup>
     <None Include="Resources\deshacer.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alinear.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

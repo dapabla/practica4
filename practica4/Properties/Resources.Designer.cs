@@ -73,6 +73,16 @@ namespace practica4.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alinear {
+            get {
+                object obj = ResourceManager.GetObject("alinear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap deshacer {
             get {
                 object obj = ResourceManager.GetObject("deshacer", resourceCulture);
