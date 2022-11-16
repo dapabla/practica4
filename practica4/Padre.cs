@@ -245,6 +245,7 @@ namespace practica4
             {
                 activo.GetRichTextBox().Font = new Font(activo.GetRichTextBox().Font, FontStyle.Bold);
                 negrita.Checked = true;
+                cursiva.Checked = false;
             }
         }
 
@@ -259,6 +260,7 @@ namespace practica4
             else
             {
                 activo.GetRichTextBox().Font = new Font(activo.GetRichTextBox().Font, FontStyle.Italic);
+                negrita.Checked = false;
                 cursiva.Checked = true;
             }
         }
