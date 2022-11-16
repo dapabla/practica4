@@ -353,5 +353,13 @@ namespace practica4
         {
             alinear_derecha.PerformClick();
         }
+
+        private void titulo_S_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (MouseButtons.Equals(MouseButtons.Right))
+            {
+                this.contextBarraEstado.Show(this, new Point(e.X, e.Y+650));
+            }
+        }
     }
 }

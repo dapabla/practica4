@@ -75,10 +75,13 @@
             this.alinearIzquierdaMenuClick = new System.Windows.Forms.ToolStripMenuItem();
             this.centrarMenuClick = new System.Windows.Forms.ToolStripMenuItem();
             this.alinearDerechaMenuClick = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextBarraEstado = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.barraEstadoMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.mStrip.SuspendLayout();
             this.barraEstado_Padre.SuspendLayout();
             this.herramientas_Padre.SuspendLayout();
             this.menuClick.SuspendLayout();
+            this.contextBarraEstado.SuspendLayout();
             this.SuspendLayout();
             // 
             // mStrip
@@ -221,9 +224,10 @@
             // titulo_S
             // 
             this.titulo_S.Name = "titulo_S";
-            this.titulo_S.Size = new System.Drawing.Size(825, 17);
+            this.titulo_S.Size = new System.Drawing.Size(794, 17);
             this.titulo_S.Spring = true;
             this.titulo_S.Text = "toolStripStatusLabel2";
+            this.titulo_S.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titulo_S_MouseDown);
             // 
             // herramientas_Padre
             // 
@@ -315,7 +319,7 @@
             this.alinear_izquierda.CheckOnClick = true;
             this.alinear_izquierda.Image = global::practica4.Properties.Resources.izquierda;
             this.alinear_izquierda.Name = "alinear_izquierda";
-            this.alinear_izquierda.Size = new System.Drawing.Size(180, 22);
+            this.alinear_izquierda.Size = new System.Drawing.Size(122, 22);
             this.alinear_izquierda.Text = "izquierda";
             this.alinear_izquierda.Click += new System.EventHandler(this.alinear_izquierda_Click);
             // 
@@ -324,7 +328,7 @@
             this.alinear_centro.CheckOnClick = true;
             this.alinear_centro.Image = global::practica4.Properties.Resources.alinear;
             this.alinear_centro.Name = "alinear_centro";
-            this.alinear_centro.Size = new System.Drawing.Size(180, 22);
+            this.alinear_centro.Size = new System.Drawing.Size(122, 22);
             this.alinear_centro.Text = "centrar";
             this.alinear_centro.Click += new System.EventHandler(this.alinear_centro_Click);
             // 
@@ -333,7 +337,7 @@
             this.alinear_derecha.CheckOnClick = true;
             this.alinear_derecha.Image = global::practica4.Properties.Resources.derecha;
             this.alinear_derecha.Name = "alinear_derecha";
-            this.alinear_derecha.Size = new System.Drawing.Size(180, 22);
+            this.alinear_derecha.Size = new System.Drawing.Size(122, 22);
             this.alinear_derecha.Text = "derecha";
             this.alinear_derecha.Click += new System.EventHandler(this.alinear_derecha_Click);
             // 
@@ -449,14 +453,14 @@
             this.alinearDerechaMenuClick});
             this.parrafoMenuClick.Image = global::practica4.Properties.Resources.parrafo;
             this.parrafoMenuClick.Name = "parrafoMenuClick";
-            this.parrafoMenuClick.Size = new System.Drawing.Size(180, 22);
+            this.parrafoMenuClick.Size = new System.Drawing.Size(121, 22);
             this.parrafoMenuClick.Text = "Párrafo...";
             // 
             // alinearIzquierdaMenuClick
             // 
             this.alinearIzquierdaMenuClick.Image = global::practica4.Properties.Resources.izquierda;
             this.alinearIzquierdaMenuClick.Name = "alinearIzquierdaMenuClick";
-            this.alinearIzquierdaMenuClick.Size = new System.Drawing.Size(180, 22);
+            this.alinearIzquierdaMenuClick.Size = new System.Drawing.Size(162, 22);
             this.alinearIzquierdaMenuClick.Text = "Alinear izquierda";
             this.alinearIzquierdaMenuClick.Click += new System.EventHandler(this.alinearIzquierdaMenuClick_Click);
             // 
@@ -464,7 +468,7 @@
             // 
             this.centrarMenuClick.Image = global::practica4.Properties.Resources.centrar;
             this.centrarMenuClick.Name = "centrarMenuClick";
-            this.centrarMenuClick.Size = new System.Drawing.Size(180, 22);
+            this.centrarMenuClick.Size = new System.Drawing.Size(162, 22);
             this.centrarMenuClick.Text = "Centrar";
             this.centrarMenuClick.Click += new System.EventHandler(this.centrarMenuClick_Click);
             // 
@@ -472,9 +476,22 @@
             // 
             this.alinearDerechaMenuClick.Image = global::practica4.Properties.Resources.derecha;
             this.alinearDerechaMenuClick.Name = "alinearDerechaMenuClick";
-            this.alinearDerechaMenuClick.Size = new System.Drawing.Size(180, 22);
+            this.alinearDerechaMenuClick.Size = new System.Drawing.Size(162, 22);
             this.alinearDerechaMenuClick.Text = "Alinear derecha";
             this.alinearDerechaMenuClick.Click += new System.EventHandler(this.alinearDerechaMenuClick_Click);
+            // 
+            // contextBarraEstado
+            // 
+            this.contextBarraEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.barraEstadoMenu});
+            this.contextBarraEstado.Name = "contextBarraEstado";
+            this.contextBarraEstado.Size = new System.Drawing.Size(156, 26);
+            // 
+            // barraEstadoMenu
+            // 
+            this.barraEstadoMenu.Name = "barraEstadoMenu";
+            this.barraEstadoMenu.Size = new System.Drawing.Size(155, 22);
+            this.barraEstadoMenu.Text = "Barra de estado";
             // 
             // Padre
             // 
@@ -498,6 +515,7 @@
             this.herramientas_Padre.ResumeLayout(false);
             this.herramientas_Padre.PerformLayout();
             this.menuClick.ResumeLayout(false);
+            this.contextBarraEstado.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -550,6 +568,8 @@
         private System.Windows.Forms.ToolStripMenuItem alinearIzquierdaMenuClick;
         private System.Windows.Forms.ToolStripMenuItem centrarMenuClick;
         private System.Windows.Forms.ToolStripMenuItem alinearDerechaMenuClick;
+        private System.Windows.Forms.ContextMenuStrip contextBarraEstado;
+        private System.Windows.Forms.ToolStripMenuItem barraEstadoMenu;
     }
 }
 
