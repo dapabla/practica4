@@ -49,6 +49,7 @@
             this.herramientas_Padre = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.nuevo_boton = new System.Windows.Forms.ToolStripButton();
             this.abrir_boton = new System.Windows.Forms.ToolStripButton();
             this.deshacer_boton = new System.Windows.Forms.ToolStripButton();
@@ -59,7 +60,9 @@
             this.alinear_derecha = new System.Windows.Forms.ToolStripMenuItem();
             this.negrita = new System.Windows.Forms.ToolStripButton();
             this.cursiva = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.copiar_boton = new System.Windows.Forms.ToolStripButton();
+            this.pegar_boton = new System.Windows.Forms.ToolStripButton();
+            this.cortar_boton = new System.Windows.Forms.ToolStripButton();
             this.mStrip.SuspendLayout();
             this.barraEstado_Padre.SuspendLayout();
             this.herramientas_Padre.SuspendLayout();
@@ -221,7 +224,10 @@
             this.alinear,
             this.negrita,
             this.cursiva,
-            this.toolStripSeparator5});
+            this.toolStripSeparator5,
+            this.copiar_boton,
+            this.pegar_boton,
+            this.cortar_boton});
             this.herramientas_Padre.Location = new System.Drawing.Point(0, 24);
             this.herramientas_Padre.Name = "herramientas_Padre";
             this.herramientas_Padre.Size = new System.Drawing.Size(840, 25);
@@ -237,6 +243,11 @@
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // nuevo_boton
             // 
@@ -296,7 +307,7 @@
             this.alinear_izquierda.CheckOnClick = true;
             this.alinear_izquierda.Image = global::practica4.Properties.Resources.izquierda;
             this.alinear_izquierda.Name = "alinear_izquierda";
-            this.alinear_izquierda.Size = new System.Drawing.Size(180, 22);
+            this.alinear_izquierda.Size = new System.Drawing.Size(122, 22);
             this.alinear_izquierda.Text = "izquierda";
             this.alinear_izquierda.Click += new System.EventHandler(this.alinear_izquierda_Click);
             // 
@@ -305,7 +316,7 @@
             this.alinear_centro.CheckOnClick = true;
             this.alinear_centro.Image = global::practica4.Properties.Resources.alinear;
             this.alinear_centro.Name = "alinear_centro";
-            this.alinear_centro.Size = new System.Drawing.Size(180, 22);
+            this.alinear_centro.Size = new System.Drawing.Size(122, 22);
             this.alinear_centro.Text = "centrar";
             this.alinear_centro.Click += new System.EventHandler(this.alinear_centro_Click);
             // 
@@ -314,7 +325,7 @@
             this.alinear_derecha.CheckOnClick = true;
             this.alinear_derecha.Image = global::practica4.Properties.Resources.derecha;
             this.alinear_derecha.Name = "alinear_derecha";
-            this.alinear_derecha.Size = new System.Drawing.Size(180, 22);
+            this.alinear_derecha.Size = new System.Drawing.Size(122, 22);
             this.alinear_derecha.Text = "derecha";
             this.alinear_derecha.Click += new System.EventHandler(this.alinear_derecha_Click);
             // 
@@ -338,10 +349,35 @@
             this.cursiva.Text = "toolStripButton2";
             this.cursiva.Click += new System.EventHandler(this.cursiva_Click);
             // 
-            // toolStripSeparator5
+            // copiar_boton
             // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            this.copiar_boton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.copiar_boton.Image = global::practica4.Properties.Resources.copiar;
+            this.copiar_boton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.copiar_boton.Name = "copiar_boton";
+            this.copiar_boton.Size = new System.Drawing.Size(23, 22);
+            this.copiar_boton.Text = "toolStripButton1";
+            this.copiar_boton.Click += new System.EventHandler(this.copiar_boton_Click);
+            // 
+            // pegar_boton
+            // 
+            this.pegar_boton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pegar_boton.Image = global::practica4.Properties.Resources.pegar;
+            this.pegar_boton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.pegar_boton.Name = "pegar_boton";
+            this.pegar_boton.Size = new System.Drawing.Size(23, 22);
+            this.pegar_boton.Text = "toolStripButton2";
+            this.pegar_boton.Click += new System.EventHandler(this.pegar_boton_Click);
+            // 
+            // cortar_boton
+            // 
+            this.cortar_boton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cortar_boton.Image = global::practica4.Properties.Resources.cortar;
+            this.cortar_boton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cortar_boton.Name = "cortar_boton";
+            this.cortar_boton.Size = new System.Drawing.Size(23, 22);
+            this.cortar_boton.Text = "toolStripButton3";
+            this.cortar_boton.Click += new System.EventHandler(this.cortar_boton_Click);
             // 
             // Padre
             // 
@@ -402,6 +438,9 @@
         private System.Windows.Forms.ToolStripButton negrita;
         private System.Windows.Forms.ToolStripButton cursiva;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton copiar_boton;
+        private System.Windows.Forms.ToolStripButton pegar_boton;
+        private System.Windows.Forms.ToolStripButton cortar_boton;
     }
 }
 

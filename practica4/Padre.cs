@@ -24,6 +24,9 @@ namespace practica4
             this.alinear.Enabled = false;
             this.negrita.Enabled = false;   
             this.cursiva.Enabled = false;
+            this.cortar_boton.Enabled = false;
+            this.copiar_boton.Enabled = false;
+            this.pegar_boton.Enabled = false;
 
             foreach (ToolStripMenuItem x in this.mStrip.Items)
             {
@@ -106,6 +109,9 @@ namespace practica4
                 this.alinear.Enabled = false;
                 this.negrita.Enabled = false;
                 this.cursiva.Enabled = false;
+                this.cortar_boton.Enabled = false;
+                this.copiar_boton.Enabled = false;
+                this.pegar_boton.Enabled = false;
             }
             else
             {
@@ -117,6 +123,9 @@ namespace practica4
                 this.alinear_izquierda.Checked = true;
                 this.negrita.Enabled = true;
                 this.cursiva.Enabled = true;
+                this.cortar_boton.Enabled = true;
+                this.copiar_boton.Enabled = true;
+                this.pegar_boton.Enabled = true;
             }
         }
 
@@ -270,6 +279,24 @@ namespace practica4
                 negrita.Checked = false;
                 cursiva.Checked = true;
             }
+        }
+
+        private void copiar_boton_Click(object sender, EventArgs e)
+        {
+            Hijo activo = (Hijo)this.ActiveMdiChild;
+            activo.GetRichTextBox().Copy();
+        }
+
+        private void pegar_boton_Click(object sender, EventArgs e)
+        {
+            Hijo activo = (Hijo)this.ActiveMdiChild;
+            activo.GetRichTextBox().Paste();
+        }
+
+        private void cortar_boton_Click(object sender, EventArgs e)
+        {
+            Hijo activo = (Hijo)this.ActiveMdiChild;
+            activo.GetRichTextBox().Cut();
         }
     }
 }
