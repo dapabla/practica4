@@ -17,7 +17,7 @@ namespace practica4
         public Padre()
         {
             InitializeComponent();
-            this.apartado2.Visible = false;
+            this.ventana_Padre.Visible = false;
             this.titulo_S.Text = "";
             this.deshacer_boton.Enabled = false;
             this.hacer_boton.Enabled = false;
@@ -43,8 +43,8 @@ namespace practica4
             }
 
         }
-
-        private void a1_sub1_Click(object sender, EventArgs e)
+        
+        private void nuevo_Padre_Click(object sender, EventArgs e)
         {
             this.i = this.i + 1;
             Hijo hijo = new Hijo();
@@ -71,7 +71,7 @@ namespace practica4
         }
 
 
-        private void a1_sub2_Click(object sender, EventArgs e)
+        private void salir_Padre_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -81,22 +81,22 @@ namespace practica4
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        private void horizontal_Padre_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.TileHorizontal);
         }
 
-        private void apartado2_1_Click(object sender, EventArgs e)
+        private void arrangeIcons_Padre_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.ArrangeIcons);
         }
 
-        private void apartado2_2_Click(object sender, EventArgs e)
+        private void cascada_Padre_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.Cascade);
         }
 
-        private void apartado2_4_Click(object sender, EventArgs e)
+        private void vertical_Padre_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.TileVertical);
         }
@@ -105,7 +105,7 @@ namespace practica4
         {
             if (this.ActiveMdiChild == null)
             {
-                this.apartado2.Visible = false;
+                this.ventana_Padre.Visible = false;
                 this.titulo_S.Text = "";
                 this.deshacer_boton.Enabled = false;
                 this.hacer_boton.Enabled = false;
@@ -118,7 +118,7 @@ namespace practica4
             }
             else
             {
-                this.apartado2.Visible = true;
+                this.ventana_Padre.Visible = true;
                 this.titulo_S.Text = this.ActiveMdiChild.Text;
                 this.deshacer_boton.Enabled = true;
                 this.hacer_boton.Enabled = true;
@@ -208,7 +208,7 @@ namespace practica4
 
         private void nuevo_boton_Click(object sender, EventArgs e)
         {
-            a1_sub1.PerformClick();
+            nuevo_Padre.PerformClick();
         }
 
         private void abrir_boton_Click(object sender, EventArgs e)

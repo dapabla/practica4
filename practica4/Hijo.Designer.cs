@@ -48,9 +48,9 @@
             // 
             this.textoHijo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textoHijo.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoHijo.Location = new System.Drawing.Point(0, 24);
+            this.textoHijo.Location = new System.Drawing.Point(0, 0);
             this.textoHijo.Name = "textoHijo";
-            this.textoHijo.Size = new System.Drawing.Size(800, 426);
+            this.textoHijo.Size = new System.Drawing.Size(800, 450);
             this.textoHijo.TabIndex = 0;
             this.textoHijo.Text = "";
             this.textoHijo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textoHijo_MouseDown);
@@ -84,7 +84,7 @@
             this.guardar_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.guardar_Hijo.MergeIndex = 2;
             this.guardar_Hijo.Name = "guardar_Hijo";
-            this.guardar_Hijo.Size = new System.Drawing.Size(150, 22);
+            this.guardar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.guardar_Hijo.Text = "Guardar";
             this.guardar_Hijo.Click += new System.EventHandler(this.guardar_Hijo_Click);
             // 
@@ -93,7 +93,7 @@
             this.guardarComo_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.guardarComo_Hijo.MergeIndex = 3;
             this.guardarComo_Hijo.Name = "guardarComo_Hijo";
-            this.guardarComo_Hijo.Size = new System.Drawing.Size(150, 22);
+            this.guardarComo_Hijo.Size = new System.Drawing.Size(180, 22);
             this.guardarComo_Hijo.Text = "Guardar como";
             this.guardarComo_Hijo.Click += new System.EventHandler(this.guardarComo_Hijo_Click);
             // 
@@ -102,7 +102,7 @@
             this.cerrar_Hijo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.cerrar_Hijo.MergeIndex = 5;
             this.cerrar_Hijo.Name = "cerrar_Hijo";
-            this.cerrar_Hijo.Size = new System.Drawing.Size(150, 22);
+            this.cerrar_Hijo.Size = new System.Drawing.Size(180, 22);
             this.cerrar_Hijo.Text = "Cerrar";
             this.cerrar_Hijo.Click += new System.EventHandler(this.cerrar_Hijo_Click);
             // 
