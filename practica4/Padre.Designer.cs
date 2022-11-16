@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.mStrip = new System.Windows.Forms.MenuStrip();
             this.apartado1 = new System.Windows.Forms.ToolStripMenuItem();
             this.a1_sub1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +51,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.menuClick = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.nuevo_boton = new System.Windows.Forms.ToolStripButton();
             this.abrir_boton = new System.Windows.Forms.ToolStripButton();
             this.deshacer_boton = new System.Windows.Forms.ToolStripButton();
@@ -63,9 +65,16 @@
             this.copiar_boton = new System.Windows.Forms.ToolStripButton();
             this.pegar_boton = new System.Windows.Forms.ToolStripButton();
             this.cortar_boton = new System.Windows.Forms.ToolStripButton();
+            this.cortarMenuClick = new System.Windows.Forms.ToolStripMenuItem();
+            this.copiarMenuClick = new System.Windows.Forms.ToolStripMenuItem();
+            this.pegarMenuClick = new System.Windows.Forms.ToolStripMenuItem();
+            this.fuenteMenuClick = new System.Windows.Forms.ToolStripMenuItem();
+            this.parrafoMenuClick = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.mStrip.SuspendLayout();
             this.barraEstado_Padre.SuspendLayout();
             this.herramientas_Padre.SuspendLayout();
+            this.menuClick.SuspendLayout();
             this.SuspendLayout();
             // 
             // mStrip
@@ -249,6 +258,18 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
+            // menuClick
+            // 
+            this.menuClick.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cortarMenuClick,
+            this.copiarMenuClick,
+            this.pegarMenuClick,
+            this.toolStripSeparator6,
+            this.fuenteMenuClick,
+            this.parrafoMenuClick});
+            this.menuClick.Name = "menuClick";
+            this.menuClick.Size = new System.Drawing.Size(181, 142);
+            // 
             // nuevo_boton
             // 
             this.nuevo_boton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -379,6 +400,49 @@
             this.cortar_boton.Text = "toolStripButton3";
             this.cortar_boton.Click += new System.EventHandler(this.cortar_boton_Click);
             // 
+            // cortarMenuClick
+            // 
+            this.cortarMenuClick.Image = global::practica4.Properties.Resources.cortar;
+            this.cortarMenuClick.Name = "cortarMenuClick";
+            this.cortarMenuClick.Size = new System.Drawing.Size(180, 22);
+            this.cortarMenuClick.Text = "Cortar";
+            this.cortarMenuClick.Click += new System.EventHandler(this.cortarMenuClick_Click);
+            // 
+            // copiarMenuClick
+            // 
+            this.copiarMenuClick.Image = global::practica4.Properties.Resources.copiar;
+            this.copiarMenuClick.Name = "copiarMenuClick";
+            this.copiarMenuClick.Size = new System.Drawing.Size(180, 22);
+            this.copiarMenuClick.Text = "Copiar";
+            this.copiarMenuClick.Click += new System.EventHandler(this.copiarMenuClick_Click);
+            // 
+            // pegarMenuClick
+            // 
+            this.pegarMenuClick.Image = global::practica4.Properties.Resources.pegar;
+            this.pegarMenuClick.Name = "pegarMenuClick";
+            this.pegarMenuClick.Size = new System.Drawing.Size(180, 22);
+            this.pegarMenuClick.Text = "Pegar";
+            this.pegarMenuClick.Click += new System.EventHandler(this.pegarMenuClick_Click);
+            // 
+            // fuenteMenuClick
+            // 
+            this.fuenteMenuClick.Image = global::practica4.Properties.Resources.fuente;
+            this.fuenteMenuClick.Name = "fuenteMenuClick";
+            this.fuenteMenuClick.Size = new System.Drawing.Size(180, 22);
+            this.fuenteMenuClick.Text = "Fuente...";
+            // 
+            // parrafoMenuClick
+            // 
+            this.parrafoMenuClick.Image = global::practica4.Properties.Resources.parrafo;
+            this.parrafoMenuClick.Name = "parrafoMenuClick";
+            this.parrafoMenuClick.Size = new System.Drawing.Size(180, 22);
+            this.parrafoMenuClick.Text = "Párrafo...";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
+            // 
             // Padre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,6 +463,7 @@
             this.barraEstado_Padre.PerformLayout();
             this.herramientas_Padre.ResumeLayout(false);
             this.herramientas_Padre.PerformLayout();
+            this.menuClick.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,6 +506,13 @@
         private System.Windows.Forms.ToolStripButton copiar_boton;
         private System.Windows.Forms.ToolStripButton pegar_boton;
         private System.Windows.Forms.ToolStripButton cortar_boton;
+        private System.Windows.Forms.ContextMenuStrip menuClick;
+        private System.Windows.Forms.ToolStripMenuItem cortarMenuClick;
+        private System.Windows.Forms.ToolStripMenuItem copiarMenuClick;
+        private System.Windows.Forms.ToolStripMenuItem pegarMenuClick;
+        private System.Windows.Forms.ToolStripMenuItem fuenteMenuClick;
+        private System.Windows.Forms.ToolStripMenuItem parrafoMenuClick;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
     }
 }
 

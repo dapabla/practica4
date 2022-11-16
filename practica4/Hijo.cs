@@ -165,5 +165,14 @@ namespace practica4
         {
             return this.GetRichTextBox().Font;
         }
+
+        private void textoHijo_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (MouseButtons.Equals(MouseButtons.Right))
+            {
+                Padre padre = (Padre)this.MdiParent;
+                padre.getMenuClick().Show(this, new Point(e.X, e.Y));
+            }
+        }
     }
 }

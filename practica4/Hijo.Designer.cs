@@ -53,6 +53,7 @@
             this.textoHijo.Size = new System.Drawing.Size(800, 450);
             this.textoHijo.TabIndex = 0;
             this.textoHijo.Text = "";
+            this.textoHijo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textoHijo_MouseDown);
             // 
             // menuStrip1
             // 

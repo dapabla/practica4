@@ -298,5 +298,24 @@ namespace practica4
             Hijo activo = (Hijo)this.ActiveMdiChild;
             activo.GetRichTextBox().Cut();
         }
+        public ContextMenuStrip getMenuClick()
+        {
+            return this.menuClick;
+        }
+
+        private void cortarMenuClick_Click(object sender, EventArgs e)
+        {
+            cortar_boton.PerformClick();
+        }
+
+        private void copiarMenuClick_Click(object sender, EventArgs e)
+        {
+            copiar_boton.PerformClick();
+        }
+
+        private void pegarMenuClick_Click(object sender, EventArgs e)
+        {
+            pegar_boton.PerformClick();
+        }
     }
 }
