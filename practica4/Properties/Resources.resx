@@ -133,6 +133,9 @@
   <data name="centrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\centrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="negrita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\negrita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="alinear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alinear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,7 +145,7 @@
   <data name="abrir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\abrir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="negrita" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\negrita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cursiva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cursiva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -114,6 +114,7 @@ namespace practica4
                 this.deshacer_boton.Enabled = true;
                 this.hacer_boton.Enabled = true;
                 this.alinear.Enabled = true;
+                this.alinear_izquierda.Checked = true;
                 this.negrita.Enabled = true;
                 this.cursiva.Enabled = true;
             }
@@ -219,31 +220,37 @@ namespace practica4
         {
             Hijo activo = (Hijo)this.ActiveMdiChild;
             activo.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Left;
+            alinear_centro.Checked = false;
+            alinear_derecha.Checked = false;
         }
 
         private void alinear_centro_Click(object sender, EventArgs e)
         {
             Hijo activo = (Hijo)this.ActiveMdiChild;
             activo.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Center;
+            alinear_izquierda.Checked = false;
+            alinear_derecha.Checked = false;
         }
 
         private void alinear_derecha_Click(object sender, EventArgs e)
         {
             Hijo activo = (Hijo)this.ActiveMdiChild;
             activo.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Right;
+            alinear_izquierda.Checked = false;
+            alinear_centro.Checked = false;
         }
 
         private void negrita_Click(object sender, EventArgs e)
         {
             Hijo activo = (Hijo)this.ActiveMdiChild;
-            if (activo.GetRichTextBox().Font.Bold)
+            if (activo.GetRichTextBox().SelectionFont.Bold)
             {
-                activo.GetRichTextBox().Font = new Font(activo.GetRichTextBox().Font, FontStyle.Regular);
+                activo.GetRichTextBox().SelectionFont = new Font(activo.GetRichTextBox().Font, FontStyle.Regular);
                 negrita.Checked = false;
             }
             else
             {
-                activo.GetRichTextBox().Font = new Font(activo.GetRichTextBox().Font, FontStyle.Bold);
+                activo.GetRichTextBox().SelectionFont = new Font(activo.GetRichTextBox().Font, FontStyle.Bold);
                 negrita.Checked = true;
                 cursiva.Checked = false;
             }
@@ -252,14 +259,14 @@ namespace practica4
         private void cursiva_Click(object sender, EventArgs e)
         {
             Hijo activo = (Hijo)this.ActiveMdiChild;
-            if (activo.GetRichTextBox().Font.Italic)
+            if (activo.GetRichTextBox().SelectionFont.Italic)
             {
-                activo.GetRichTextBox().Font = new Font(activo.GetRichTextBox().Font, FontStyle.Regular);
+                activo.GetRichTextBox().SelectionFont = new Font(activo.GetRichTextBox().Font, FontStyle.Regular);
                 cursiva.Checked = false;
             }
             else
             {
-                activo.GetRichTextBox().Font = new Font(activo.GetRichTextBox().Font, FontStyle.Italic);
+                activo.GetRichTextBox().SelectionFont = new Font(activo.GetRichTextBox().Font, FontStyle.Italic);
                 negrita.Checked = false;
                 cursiva.Checked = true;
             }

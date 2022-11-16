@@ -93,6 +93,16 @@ namespace practica4.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cursiva {
+            get {
+                object obj = ResourceManager.GetObject("cursiva", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap derecha {
             get {
                 object obj = ResourceManager.GetObject("derecha", resourceCulture);
