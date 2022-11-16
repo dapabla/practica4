@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Padre));
             this.mStrip = new System.Windows.Forms.MenuStrip();
             this.apartado1 = new System.Windows.Forms.ToolStripMenuItem();
             this.a1_sub1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -401,7 +402,7 @@
             this.fuenteMenuClick,
             this.parrafoMenuClick});
             this.menuClick.Name = "menuClick";
-            this.menuClick.Size = new System.Drawing.Size(181, 142);
+            this.menuClick.Size = new System.Drawing.Size(122, 120);
             // 
             // cortarMenuClick
             // 
@@ -483,6 +484,7 @@
             this.Controls.Add(this.herramientas_Padre);
             this.Controls.Add(this.barraEstado_Padre);
             this.Controls.Add(this.mStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mStrip;
             this.Name = "Padre";
