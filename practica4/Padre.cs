@@ -233,7 +233,9 @@ namespace practica4
             Hijo activo = (Hijo)this.ActiveMdiChild;
             activo.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Left;
             alinear_centro.Checked = false;
+            centrarMenuClick.Checked = false;
             alinear_derecha.Checked = false;
+            alinearDerechaMenuClick.Checked = false;    
         }
 
         private void alinear_centro_Click(object sender, EventArgs e)
@@ -241,7 +243,9 @@ namespace practica4
             Hijo activo = (Hijo)this.ActiveMdiChild;
             activo.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Center;
             alinear_izquierda.Checked = false;
+            alinearIzquierdaMenuClick.Checked = false;
             alinear_derecha.Checked = false;
+            alinearDerechaMenuClick.Checked = false;
         }
 
         private void alinear_derecha_Click(object sender, EventArgs e)
@@ -249,7 +253,9 @@ namespace practica4
             Hijo activo = (Hijo)this.ActiveMdiChild;
             activo.GetRichTextBox().SelectionAlignment = HorizontalAlignment.Right;
             alinear_izquierda.Checked = false;
+            alinearIzquierdaMenuClick.Checked = false;
             alinear_centro.Checked = false;
+            centrarMenuClick.Checked = false;
         }
 
         private void negrita_Click(object sender, EventArgs e)
@@ -360,6 +366,11 @@ namespace practica4
             {
                 this.contextBarraEstado.Show(this, new Point(e.X, e.Y+650));
             }
+        }
+
+        private void barraEstadoMenu_Click(object sender, EventArgs e)
+        {
+            this.barraDeEstadoVer_Padre.PerformClick();
         }
     }
 }

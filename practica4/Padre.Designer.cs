@@ -406,7 +406,7 @@
             this.fuenteMenuClick,
             this.parrafoMenuClick});
             this.menuClick.Name = "menuClick";
-            this.menuClick.Size = new System.Drawing.Size(122, 120);
+            this.menuClick.Size = new System.Drawing.Size(181, 142);
             // 
             // cortarMenuClick
             // 
@@ -453,30 +453,35 @@
             this.alinearDerechaMenuClick});
             this.parrafoMenuClick.Image = global::practica4.Properties.Resources.parrafo;
             this.parrafoMenuClick.Name = "parrafoMenuClick";
-            this.parrafoMenuClick.Size = new System.Drawing.Size(121, 22);
+            this.parrafoMenuClick.Size = new System.Drawing.Size(180, 22);
             this.parrafoMenuClick.Text = "Párrafo...";
             // 
             // alinearIzquierdaMenuClick
             // 
+            this.alinearIzquierdaMenuClick.Checked = true;
+            this.alinearIzquierdaMenuClick.CheckOnClick = true;
+            this.alinearIzquierdaMenuClick.CheckState = System.Windows.Forms.CheckState.Checked;
             this.alinearIzquierdaMenuClick.Image = global::practica4.Properties.Resources.izquierda;
             this.alinearIzquierdaMenuClick.Name = "alinearIzquierdaMenuClick";
-            this.alinearIzquierdaMenuClick.Size = new System.Drawing.Size(162, 22);
+            this.alinearIzquierdaMenuClick.Size = new System.Drawing.Size(180, 22);
             this.alinearIzquierdaMenuClick.Text = "Alinear izquierda";
             this.alinearIzquierdaMenuClick.Click += new System.EventHandler(this.alinearIzquierdaMenuClick_Click);
             // 
             // centrarMenuClick
             // 
+            this.centrarMenuClick.CheckOnClick = true;
             this.centrarMenuClick.Image = global::practica4.Properties.Resources.centrar;
             this.centrarMenuClick.Name = "centrarMenuClick";
-            this.centrarMenuClick.Size = new System.Drawing.Size(162, 22);
+            this.centrarMenuClick.Size = new System.Drawing.Size(180, 22);
             this.centrarMenuClick.Text = "Centrar";
             this.centrarMenuClick.Click += new System.EventHandler(this.centrarMenuClick_Click);
             // 
             // alinearDerechaMenuClick
             // 
+            this.alinearDerechaMenuClick.CheckOnClick = true;
             this.alinearDerechaMenuClick.Image = global::practica4.Properties.Resources.derecha;
             this.alinearDerechaMenuClick.Name = "alinearDerechaMenuClick";
-            this.alinearDerechaMenuClick.Size = new System.Drawing.Size(162, 22);
+            this.alinearDerechaMenuClick.Size = new System.Drawing.Size(180, 22);
             this.alinearDerechaMenuClick.Text = "Alinear derecha";
             this.alinearDerechaMenuClick.Click += new System.EventHandler(this.alinearDerechaMenuClick_Click);
             // 
@@ -489,9 +494,12 @@
             // 
             // barraEstadoMenu
             // 
+            this.barraEstadoMenu.Checked = true;
+            this.barraEstadoMenu.CheckState = System.Windows.Forms.CheckState.Checked;
             this.barraEstadoMenu.Name = "barraEstadoMenu";
-            this.barraEstadoMenu.Size = new System.Drawing.Size(155, 22);
+            this.barraEstadoMenu.Size = new System.Drawing.Size(180, 22);
             this.barraEstadoMenu.Text = "Barra de estado";
+            this.barraEstadoMenu.Click += new System.EventHandler(this.barraEstadoMenu_Click);
             // 
             // Padre
             // 
