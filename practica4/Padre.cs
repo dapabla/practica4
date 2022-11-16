@@ -65,6 +65,9 @@ namespace practica4
                     y.MouseLeave += new EventHandler(menuLeave);
                 }
             }
+
+
+
         }
 
 
@@ -316,6 +319,39 @@ namespace practica4
         private void pegarMenuClick_Click(object sender, EventArgs e)
         {
             pegar_boton.PerformClick();
+        }
+
+        private void fuenteMenuClick_Click(object sender, EventArgs e)
+        {
+            Hijo activo = (Hijo)this.ActiveMdiChild;
+            FontDialog fuente = new FontDialog();
+            fuente.ShowColor = true;
+            fuente.Font = activo.GetRichTextBox().Font;
+
+            if (fuente.ShowDialog() != DialogResult.Cancel)
+            {
+                activo.GetRichTextBox().Font = fuente.Font;
+                activo.GetRichTextBox().ForeColor = fuente.Color;
+            }
+            else
+            {
+                fuente.Dispose();
+            }
+        }
+
+        private void alinearIzquierdaMenuClick_Click(object sender, EventArgs e)
+        {
+            alinear_izquierda.PerformClick();
+        }
+
+        private void centrarMenuClick_Click(object sender, EventArgs e)
+        {
+            alinear_centro.PerformClick();
+        }
+
+        private void alinearDerechaMenuClick_Click(object sender, EventArgs e)
+        {
+            alinear_derecha.PerformClick();
         }
     }
 }
