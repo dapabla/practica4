@@ -112,33 +112,33 @@
             // nuevo_Padre
             // 
             this.nuevo_Padre.Name = "nuevo_Padre";
-            this.nuevo_Padre.Size = new System.Drawing.Size(180, 22);
+            this.nuevo_Padre.Size = new System.Drawing.Size(134, 22);
             this.nuevo_Padre.Text = "Nuevo";
             this.nuevo_Padre.Click += new System.EventHandler(this.nuevo_Padre_Click);
             // 
             // abrir_Padre
             // 
             this.abrir_Padre.Name = "abrir_Padre";
-            this.abrir_Padre.Size = new System.Drawing.Size(180, 22);
+            this.abrir_Padre.Size = new System.Drawing.Size(134, 22);
             this.abrir_Padre.Text = "Abrir";
             this.abrir_Padre.Click += new System.EventHandler(this.abrir_Padre_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(131, 6);
             // 
             // cerrarTodo_Padre
             // 
             this.cerrarTodo_Padre.Name = "cerrarTodo_Padre";
-            this.cerrarTodo_Padre.Size = new System.Drawing.Size(180, 22);
+            this.cerrarTodo_Padre.Size = new System.Drawing.Size(134, 22);
             this.cerrarTodo_Padre.Text = "Cerrar todo";
             this.cerrarTodo_Padre.Click += new System.EventHandler(this.cerrarTodo_Padre_Click);
             // 
             // salir_Padre
             // 
             this.salir_Padre.Name = "salir_Padre";
-            this.salir_Padre.Size = new System.Drawing.Size(180, 22);
+            this.salir_Padre.Size = new System.Drawing.Size(134, 22);
             this.salir_Padre.Text = "Salir";
             this.salir_Padre.Click += new System.EventHandler(this.salir_Padre_Click);
             // 
@@ -157,35 +157,35 @@
             // arrangeIcons_Padre
             // 
             this.arrangeIcons_Padre.Name = "arrangeIcons_Padre";
-            this.arrangeIcons_Padre.Size = new System.Drawing.Size(180, 22);
+            this.arrangeIcons_Padre.Size = new System.Drawing.Size(147, 22);
             this.arrangeIcons_Padre.Text = "Arrange Icons";
             this.arrangeIcons_Padre.Click += new System.EventHandler(this.arrangeIcons_Padre_Click);
             // 
             // cascada_Padre
             // 
             this.cascada_Padre.Name = "cascada_Padre";
-            this.cascada_Padre.Size = new System.Drawing.Size(180, 22);
+            this.cascada_Padre.Size = new System.Drawing.Size(147, 22);
             this.cascada_Padre.Text = "Cascada";
             this.cascada_Padre.Click += new System.EventHandler(this.cascada_Padre_Click);
             // 
             // horizontal_Padre
             // 
             this.horizontal_Padre.Name = "horizontal_Padre";
-            this.horizontal_Padre.Size = new System.Drawing.Size(180, 22);
+            this.horizontal_Padre.Size = new System.Drawing.Size(147, 22);
             this.horizontal_Padre.Text = "Horizontal";
             this.horizontal_Padre.Click += new System.EventHandler(this.horizontal_Padre_Click);
             // 
             // vertical_Padre
             // 
             this.vertical_Padre.Name = "vertical_Padre";
-            this.vertical_Padre.Size = new System.Drawing.Size(180, 22);
+            this.vertical_Padre.Size = new System.Drawing.Size(147, 22);
             this.vertical_Padre.Text = "Vertical";
             this.vertical_Padre.Click += new System.EventHandler(this.vertical_Padre_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
             // 
             // ver_Padre
             // 
@@ -201,12 +201,13 @@
             this.barraDeEstadoVer_Padre.CheckOnClick = true;
             this.barraDeEstadoVer_Padre.CheckState = System.Windows.Forms.CheckState.Checked;
             this.barraDeEstadoVer_Padre.Name = "barraDeEstadoVer_Padre";
-            this.barraDeEstadoVer_Padre.Size = new System.Drawing.Size(180, 22);
+            this.barraDeEstadoVer_Padre.Size = new System.Drawing.Size(155, 22);
             this.barraDeEstadoVer_Padre.Text = "Barra de estado";
             this.barraDeEstadoVer_Padre.Click += new System.EventHandler(this.barraDeEstadoVer_Padre_Click);
             // 
             // barraEstado_Padre
             // 
+            this.barraEstado_Padre.ContextMenuStrip = this.contextBarraEstado;
             this.barraEstado_Padre.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.constante_S,
             this.titulo_S});
@@ -224,10 +225,9 @@
             // titulo_S
             // 
             this.titulo_S.Name = "titulo_S";
-            this.titulo_S.Size = new System.Drawing.Size(825, 17);
+            this.titulo_S.Size = new System.Drawing.Size(794, 17);
             this.titulo_S.Spring = true;
             this.titulo_S.Text = "toolStripStatusLabel2";
-            this.titulo_S.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titulo_S_MouseDown);
             // 
             // herramientas_Padre
             // 
